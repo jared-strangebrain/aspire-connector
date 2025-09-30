@@ -1,0 +1,8 @@
+﻿{
+  "name": "tasks.create",
+  "title": "tasks.create",
+  "description": "tasks.create operation",
+  "version": "1.0.0",
+  "input": { "schema": { "type": "object", "properties": {} } },
+  "output": { "schema": { "type": "object", "properties": {} } }
+}
