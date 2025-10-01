@@ -3,7 +3,7 @@
 // ensure each suite has at least one test so Jest doesn't error
 test('smoke: file loads', () => expect(true).toBe(true));
 
-// raw_http test
+// Auto-generated list test
 import { OperationHandlerTestSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerTest";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import "@trayio/cdk-runtime/connector/operation/OperationHandlerTestRunner";
@@ -15,15 +15,10 @@ OperationHandlerTestSetup.configureHandlerTest(handler, (handlerTest) =>
   handlerTest
     .usingHandlerContext("test")
     .nothingBeforeAll()
-    .testCase("GET /api/Contacts $top=1", (tc) =>
+    .testCase("returns at least one item", (tc) =>
       tc
         .givenNothing()
-        .when(() => ({
-          method: "GET",
-          path: "/api/Contacts",
-          query: { "$top": 1, "$select": "Id" },
-          response: "json"
-        } as any))
+        .when(() => ({ $top: 1 } as any))
         .then(({ output }) => {
           const value = OperationHandlerResult.getSuccessfulValueOrFail(output);
           expect(value).toBeDefined();
