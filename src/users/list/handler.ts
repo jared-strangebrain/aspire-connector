@@ -1,37 +1,44 @@
-﻿import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
-const configure: any = (OperationHandlerSetup as any).configureHandler;const OperationHandlerSetupAny: any = OperationHandlerSetup;
+import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import type { AspireAuth } from "../../Auth.js";
 import type { ListUsersInput } from "./input.js";
 import type { ListUsersOutput } from "./output.js";
 
 export const listUsersHandler = OperationHandlerSetup
-  configure("users.list", (handler: any) =>
-    handler.usingComposite(async (ctx: any, input: ListUsersInput) => {
+  .configureHandler<AspireAuth, ListUsersInput, ListUsersOutput>((handler) =>
+    handler.usingComposite(async (ctx, input) => {
       const base = ctx?.auth?.user?.base_url;
       if (!base) throw new Error("Missing base_url in auth context");
 
       const url = new URL("/api/Users", base);
-      const q: any = input as any;
-      if (q.$filter)  url.searchParams.set("$filter",  q.$filter);
-      if (q.$select)  url.searchParams.set("$select",  q.$select);
-      if (q.$orderby) url.searchParams.set("$orderby", q.$orderby);
-      if (q.$top != null)  url.searchParams.set("$top",  String(q.$top));
-      if (q.$skip != null) url.searchParams.set("$skip", String(q.$skip));
-      if (q.$expand)  url.searchParams.set("$expand",  q.$expand);
+
+      // Set only provided OData params
+      if (input.$filter)  url.searchParams.set("$filter",  input.$filter);
+      if (input.$select)  url.searchParams.set("$select",  input.$select);
+      if (input.$orderby) url.searchParams.set("$orderby", input.$orderby);
+      if (input.$top != null)  url.searchParams.set("$top",  String(input.$top));
+      if (input.$skip != null) url.searchParams.set("$skip", String(input.$skip));
+      if (input.$expand)  url.searchParams.set("$expand",  input.$expand);
 
       const res = await fetch(url.toString(), {
         method: "GET",
-        headers: { "Authorization": `Bearer ${ctx.auth!.user.access_token}`, "Accept": "application/json" }
+        headers: {
+          Authorization: `Bearer ${ctx.auth!.user.access_token}`,
+          Accept: "application/json",
+        },
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text().catch(()=> "")}`);
-      const data = await res.json();
-      return OperationHandlerResult.success(data as ListUsersOutput);
+
+      if (!res.ok) {
+        const t = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status}: ${t}`);
+      }
+
+      // Be tolerant if the API returns text
+      const ctype = res.headers.get("content-type") || "";
+      const out: unknown = ctype.includes("application/json")
+        ? await res.json().catch(() => ({}))
+        : await res.text().catch(() => "");
+
+      return OperationHandlerResult.success(out as ListUsersOutput);
     })
   );
-
-
-
-
-
-

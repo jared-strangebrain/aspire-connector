@@ -1,23 +1,36 @@
-// scripts/copy-operations.cjs
-const fs = require("fs");
-const path = require("path");
+// @ts-nocheck
+// // scripts/copy-operations.cjs
+/* Copy every src/**operation.json into the corresponding dist/** folder (same structure) */
+const fs = require('fs');
+const fsp = require('fs/promises');
+const path = require('path');
 
-const SRC = path.join(__dirname, "..", "src");
-const DST = path.join(__dirname, "..", "dist");
+async function main() {
+  const SRC_ROOT = path.join(process.cwd(), 'src');
+  const DIST_ROOT = path.join(process.cwd(), 'dist');
 
-function walk(dir, hits = []) {
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, e.name);
-    if (e.isDirectory()) walk(full, hits);
-    else if (e.isFile() && e.name === "operation.json") hits.push(full);
+  async function walk(dir) {
+    const entries = await fsp.readdir(dir, { withFileTypes: true });
+    for (const e of entries) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        await walk(full);
+      } else if (e.isFile() && e.name === 'operation.json') {
+        const rel = path.relative(SRC_ROOT, full); // e.g. "contacts/create/operation.json"
+        const dest = path.join(DIST_ROOT, rel);    // -> "dist/contacts/create/operation.json"
+        await fsp.mkdir(path.dirname(dest), { recursive: true });
+        await fsp.copyFile(full, dest);
+        console.log(`copied ${path.relative(SRC_ROOT, full)} -> ${path.relative(DIST_ROOT, dest)}`);
+      }
+    }
   }
-  return hits;
+
+  // Ensure dist exists
+  await fsp.mkdir(DIST_ROOT, { recursive: true });
+  await walk(SRC_ROOT);
 }
 
-for (const srcPath of walk(SRC)) {
-  const rel = path.relative(SRC, srcPath);         // e.g. "contacts/list/operation.json"
-  const dstPath = path.join(DST, rel);              // e.g. "dist/contacts/list/operation.json"
-  fs.mkdirSync(path.dirname(dstPath), { recursive: true });
-  fs.copyFileSync(srcPath, dstPath);
-  console.log("copied", rel);
-}
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
