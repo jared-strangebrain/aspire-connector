@@ -1,6 +1,6 @@
 {
   "name": "aspire-cdk-connector",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Aspire Cloud API connector (Prod/Sandbox) with auto auth refresh; composite+fetch handlers",
   "license": "UNLICENSED",
   "type": "module",
