@@ -1,30 +1,41 @@
-﻿import { test, expect } from '@jest/globals';
+﻿// src/list_contacts/handler.test.ts
+import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
+import { __impl as listContactsImpl } from './handler.js';
 
-// ensure each suite has at least one test so Jest doesn't error
-test('smoke: file loads', () => expect(true).toBe(true));
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string } } };
 
-// Auto-generated list test
-import { OperationHandlerTestSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerTest";
-import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
-import "@trayio/cdk-runtime/connector/operation/OperationHandlerTestRunner";
-import * as HandlerModule from "./handler.js";
-const handler = Object.values(HandlerModule)[0] as any;
+describe('list_contacts (direct impl)', () => {
+  const originalFetch = global.fetch as any;
 
+  beforeEach(() => {
+    global.fetch = jest.fn(async (_url: string, _init?: any) => ({
+      ok: true,
+      status: 200,
+      headers: { get: (k: string) => (k.toLowerCase() === 'content-type' ? 'application/json' : null) },
+      json: async () => ({ value: [{ id: 'c1', name: 'Ada' }] }),
+      text: async () => JSON.stringify({ value: [{ id: 'c1', name: 'Ada' }] }),
+    })) as any;
+  });
 
-OperationHandlerTestSetup.configureHandlerTest(handler, (handlerTest) =>
-  handlerTest
-    .usingHandlerContext("test")
-    .nothingBeforeAll()
-    .testCase("returns at least one item", (tc) =>
-      tc
-        .givenNothing()
-        .when(() => ({ $top: 1 } as any))
-        .then(({ output }) => {
-          const value = OperationHandlerResult.getSuccessfulValueOrFail(output);
-          expect(value).toBeDefined();
-        })
-        .finallyDoNothing()
-    )
-    .nothingAfterAll()
-);
+  afterEach(() => {
+    global.fetch = originalFetch;
+    jest.resetAllMocks();
+  });
 
+  it('calls /api/Contacts with Bearer token and respects OData params', async () => {
+    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123' } } };
+    const out = await listContactsImpl(ctx as any, { $top: 2, $select: 'id,name' });
+
+    const call = (global.fetch as jest.Mock).mock.calls[0];
+    const [url, init] = call as [string, { method: string; headers: Record<string,string> }];
+
+    expect(url).toContain('/api/Contacts');
+    const u = new URL(url);
+    expect(u.searchParams.get('$top')).toBe('2');
+    expect(u.searchParams.get('$select')).toBe('id,name');
+    expect(init.method).toBe('GET');
+    expect(init.headers.Authorization).toMatch(/^Bearer\s+abc123$/);
+
+    expect(out).toBeTruthy();
+  });
+});

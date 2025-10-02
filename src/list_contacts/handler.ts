@@ -1,3 +1,4 @@
+// src/list_contacts/handler.ts
 import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import type { AspireAuth } from "../Auth.js";
@@ -6,21 +7,22 @@ import type { ListContactsOutput } from "./output.js";
 
 const IS_TEST = !!process.env.JEST_WORKER_ID;
 
-// Minimal context type aligned with how we read it
+// Minimal context shape used by our direct impl
 type Ctx = { auth?: { user?: AspireAuth["user"] } };
 
-const impl = async (ctx: Ctx, input: ListContactsInput) => {
+// Direct implementation used by Jest; wrapped by CDK at runtime
+export const __impl = async (ctx: Ctx, input: ListContactsInput) => {
   const base = ctx?.auth?.user?.base_url;
   if (!base) throw new Error("Missing base_url in auth context");
 
   const url = new URL("/api/Contacts", base);
 
-  // set only defined OData params
+  // Only set provided OData params
   if (input.$filter)  url.searchParams.set("$filter",  input.$filter);
   if (input.$select)  url.searchParams.set("$select",  input.$select);
   if (input.$orderby) url.searchParams.set("$orderby", input.$orderby);
-  if (input.$top !== undefined)  url.searchParams.set("$top",  String(input.$top));
-  if (input.$skip !== undefined) url.searchParams.set("$skip", String(input.$skip));
+  if (input.$top != null)  url.searchParams.set("$top",  String(input.$top));
+  if (input.$skip != null) url.searchParams.set("$skip", String(input.$skip));
   if (input.$expand)  url.searchParams.set("$expand",  input.$expand);
 
   const res = await fetch(url.toString(), {
@@ -36,18 +38,19 @@ const impl = async (ctx: Ctx, input: ListContactsInput) => {
     throw new Error(`HTTP ${res.status}: ${body}`);
   }
 
-  // be tolerant if the API returns text
+  // Tolerant parsing: JSON if available, otherwise text
   const ctype = res.headers.get("content-type") || "";
-  const data: unknown = ctype.includes("application/json")
+  const out: unknown = ctype.includes("application/json")
     ? await res.json().catch(() => ({}))
     : await res.text().catch(() => "");
 
-  return OperationHandlerResult.success(data as ListContactsOutput);
+  return OperationHandlerResult.success(out as ListContactsOutput);
 };
 
+// Export for runtime (CDK) vs tests (direct impl)
 export const listContactsHandler = IS_TEST
-  ? impl
+  ? (__impl as any)
   : OperationHandlerSetup
-      .configureHandler<AspireAuth, ListContactsInput, ListContactsOutput>((handler) =>
-        handler.usingComposite(impl as any)
+      .configureHandler<AspireAuth, ListContactsInput, ListContactsOutput>((h) =>
+        h.usingComposite(__impl as any)
       );
