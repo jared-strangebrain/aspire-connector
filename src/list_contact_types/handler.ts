@@ -6,16 +6,13 @@ import type { ListContactTypesOutput } from "./output.js";
 
 const IS_TEST = !!process.env.JEST_WORKER_ID;
 
-// Minimal ctx type matching what we read
-type Ctx = { auth?: { user?: AspireAuth["user"] } };
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string } } };
 
-const impl = async (ctx: Ctx, input: ListContactTypesInput) => {
+export const __impl = async (ctx: Ctx, input: ListContactTypesInput) => {
   const base = ctx?.auth?.user?.base_url;
   if (!base) throw new Error("Missing base_url in auth context");
 
   const url = new URL("/api/ContactTypes", base);
-
-  // Set only defined OData params
   if (input.$filter)  url.searchParams.set("$filter",  input.$filter);
   if (input.$select)  url.searchParams.set("$select",  input.$select);
   if (input.$orderby) url.searchParams.set("$orderby", input.$orderby);
@@ -32,23 +29,17 @@ const impl = async (ctx: Ctx, input: ListContactTypesInput) => {
   });
 
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`HTTP ${res.status}: ${body}`);
+    const t = await res.text().catch(() => "");
+    throw new Error(`HTTP ${res.status}: ${t}`);
   }
 
-  // Be tolerant if API ever returns text
-  const ctype = res.headers.get("content-type") || "";
-  const data: unknown = ctype.includes("application/json")
-    ? await res.json().catch(() => ({}))
-    : await res.text().catch(() => "");
-
-  return OperationHandlerResult.success(data as ListContactTypesOutput);
+  const out = (await res.json()) as ListContactTypesOutput;
+  return OperationHandlerResult.success(out);
 };
 
-// Export: plain function in tests, CDK-wired in runtime
 export const listContactTypesHandler = IS_TEST
-  ? impl
+  ? (__impl as any)
   : OperationHandlerSetup
-      .configureHandler<AspireAuth, ListContactTypesInput, ListContactTypesOutput>((handler) =>
-        handler.usingComposite(impl as any)
+      .configureHandler<AspireAuth, ListContactTypesInput, ListContactTypesOutput>((h) =>
+        h.usingComposite(__impl as any)
       );

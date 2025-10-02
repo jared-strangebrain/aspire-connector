@@ -6,21 +6,18 @@ import type { ListOpportunitiesOutput } from "./output.js";
 
 const IS_TEST = !!process.env.JEST_WORKER_ID;
 
-// Minimal context aligned with how we read it
-type Ctx = { auth?: { user?: AspireAuth["user"] } };
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string} } };
 
-const impl = async (ctx: Ctx, input: ListOpportunitiesInput) => {
+export const __impl = async (ctx: Ctx, input: ListOpportunitiesInput) => {
   const base = ctx?.auth?.user?.base_url;
   if (!base) throw new Error("Missing base_url in auth context");
 
   const url = new URL("/api/Opportunities", base);
-
-  // Only set defined OData params
   if (input.$filter)  url.searchParams.set("$filter",  input.$filter);
   if (input.$select)  url.searchParams.set("$select",  input.$select);
   if (input.$orderby) url.searchParams.set("$orderby", input.$orderby);
-  if (input.$top !== undefined)  url.searchParams.set("$top",  String(input.$top));
-  if (input.$skip !== undefined) url.searchParams.set("$skip", String(input.$skip));
+  if (input.$top != null)  url.searchParams.set("$top",  String(input.$top));
+  if (input.$skip != null) url.searchParams.set("$skip", String(input.$skip));
   if (input.$expand)  url.searchParams.set("$expand",  input.$expand);
 
   const res = await fetch(url.toString(), {
@@ -32,22 +29,21 @@ const impl = async (ctx: Ctx, input: ListOpportunitiesInput) => {
   });
 
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`HTTP ${res.status}: ${body}`);
+    const t = await res.text().catch(() => "");
+    throw new Error(`HTTP ${res.status}: ${t}`);
   }
 
-  // Be tolerant if API returns text
   const ctype = res.headers.get("content-type") || "";
-  const data: unknown = ctype.includes("application/json")
+  const out: unknown = ctype.includes("application/json")
     ? await res.json().catch(() => ({}))
     : await res.text().catch(() => "");
 
-  return OperationHandlerResult.success(data as ListOpportunitiesOutput);
+  return OperationHandlerResult.success(out as ListOpportunitiesOutput);
 };
 
 export const listOpportunitiesHandler = IS_TEST
-  ? impl
+  ? (__impl as any)
   : OperationHandlerSetup
-      .configureHandler<AspireAuth, ListOpportunitiesInput, ListOpportunitiesOutput>((handler) =>
-        handler.usingComposite(impl as any)
+      .configureHandler<AspireAuth, ListOpportunitiesInput, ListOpportunitiesOutput>((h) =>
+        h.usingComposite(__impl as any)
       );

@@ -6,15 +6,13 @@ import type { ListBranchesOutput } from "./output.js";
 
 const IS_TEST = !!process.env.JEST_WORKER_ID;
 
-// minimal ctx type aligned to what we read
-type Ctx = { auth?: { user?: AspireAuth["user"] } };
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string } } };
 
-const impl = async (ctx: Ctx, input: ListBranchesInput) => {
+export const __impl = async (ctx: Ctx, input: ListBranchesInput) => {
   const base = ctx?.auth?.user?.base_url;
   if (!base) throw new Error("Missing base_url in auth context");
 
   const url = new URL("/api/Branches", base);
-
   if (input.$filter)  url.searchParams.set("$filter",  input.$filter);
   if (input.$select)  url.searchParams.set("$select",  input.$select);
   if (input.$orderby) url.searchParams.set("$orderby", input.$orderby);
@@ -31,23 +29,17 @@ const impl = async (ctx: Ctx, input: ListBranchesInput) => {
   });
 
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`HTTP ${res.status}: ${body}`);
+    const t = await res.text().catch(() => "");
+    throw new Error(`HTTP ${res.status}: ${t}`);
   }
 
-  // be tolerant if API returns text
-  const ctype = res.headers.get("content-type") || "";
-  const out: unknown = ctype.includes("application/json")
-    ? await res.json().catch(() => ({}))
-    : await res.text().catch(() => "");
-
-  return OperationHandlerResult.success(out as ListBranchesOutput);
+  const out = (await res.json()) as ListBranchesOutput;
+  return OperationHandlerResult.success(out);
 };
 
-// Export: plain function in tests, CDK-wired in runtime
 export const listBranchesHandler = IS_TEST
-  ? impl
+  ? (__impl as any)
   : OperationHandlerSetup
-      .configureHandler<AspireAuth, ListBranchesInput, ListBranchesOutput>((handler) =>
-        handler.usingComposite(impl as any)
+      .configureHandler<AspireAuth, ListBranchesInput, ListBranchesOutput>((h) =>
+        h.usingComposite(__impl as any)
       );
