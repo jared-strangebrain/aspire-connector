@@ -10,9 +10,13 @@ const IS_TEST = !!process.env.JEST_WORKER_ID;
 // Minimal context shape for what we read
 type Ctx = { auth?: { user?: AspireAuth["user"] } };
 
-const impl = async (ctx: Ctx, input: VerifyConnectionInput) => {
+// Unit-testable core implementation
+export const __impl = async (ctx: Ctx, input: VerifyConnectionInput) => {
   const base = ctx?.auth?.user?.base_url;
   if (!base) throw new Error("Missing base_url in auth context");
+
+  const token = ctx?.auth?.user?.access_token;
+  if (!token) throw new Error("Missing access_token in auth context");
 
   const url = new URL("/api/Contacts", base);
   url.searchParams.set("$top", String(input.$top ?? 1));
@@ -21,7 +25,7 @@ const impl = async (ctx: Ctx, input: VerifyConnectionInput) => {
   const res = await fetch(url.toString(), {
     method: "GET",
     headers: {
-      Authorization: `Bearer ${ctx!.auth!.user!.access_token}`,
+      Authorization: `Bearer ${token}`,
       Accept: "application/json",
     },
   });
@@ -41,8 +45,8 @@ const impl = async (ctx: Ctx, input: VerifyConnectionInput) => {
 
 // Plain function in tests; CDK-wired handler at runtime
 export const verifyConnectionHandler = IS_TEST
-  ? impl
+  ? (__impl as any)
   : OperationHandlerSetup
       .configureHandler<AspireAuth, VerifyConnectionInput, VerifyConnectionOutput>((handler) =>
-        handler.usingComposite(impl as any)
+        handler.usingComposite(__impl as any)
       );

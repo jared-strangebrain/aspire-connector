@@ -1,15 +1,15 @@
-﻿import { test, expect } from '@jest/globals';
+﻿// src/verify_connection/handler.test.ts
+import { test, expect } from '@jest/globals';
 
-// ensure each suite has at least one test so Jest doesn't error
 test('smoke: file loads', () => expect(true).toBe(true));
 
-// verify_connection test
 import { OperationHandlerTestSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerTest";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import "@trayio/cdk-runtime/connector/operation/OperationHandlerTestRunner";
-import * as HandlerModule from "./handler.js";
-const handler = Object.values(HandlerModule)[0] as any;
 
+// ✅ Prefer the named export; fall back to __impl if needed
+import { verifyConnectionHandler, __impl as verifyImpl } from "./handler.js";
+const handler: any = (verifyConnectionHandler as any) ?? (verifyImpl as any);
 
 OperationHandlerTestSetup.configureHandlerTest(handler, (handlerTest) =>
   handlerTest
@@ -27,4 +27,3 @@ OperationHandlerTestSetup.configureHandlerTest(handler, (handlerTest) =>
     )
     .nothingAfterAll()
 );
-
