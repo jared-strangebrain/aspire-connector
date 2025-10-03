@@ -1,8 +1,0 @@
-﻿{
-  "name": "verify_connection",
-  "title": "verify_connection",
-  "description": "verify_connection operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

@@ -1,8 +1,0 @@
-﻿{
-  "name": "issues.create",
-  "title": "issues.create",
-  "description": "issues.create operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

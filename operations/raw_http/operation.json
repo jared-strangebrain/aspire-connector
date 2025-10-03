@@ -1,8 +1,0 @@
-﻿{
-  "name": "raw_http",
-  "title": "raw_http",
-  "description": "raw_http operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

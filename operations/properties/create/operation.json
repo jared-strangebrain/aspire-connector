@@ -1,8 +1,0 @@
-﻿{
-  "name": "properties.create",
-  "title": "properties.create",
-  "description": "properties.create operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

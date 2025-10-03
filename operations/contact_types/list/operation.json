@@ -1,8 +1,0 @@
-﻿{
-  "name": "contact_types.list",
-  "title": "contact_types.list",
-  "description": "contact_types.list operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

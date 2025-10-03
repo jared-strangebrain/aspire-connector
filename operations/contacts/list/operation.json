@@ -1,8 +1,0 @@
-﻿{
-  "name": "contacts.list",
-  "title": "contacts.list",
-  "description": "contacts.list operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

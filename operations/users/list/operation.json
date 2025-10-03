@@ -1,8 +1,0 @@
-﻿{
-  "name": "users.list",
-  "title": "users.list",
-  "description": "users.list operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}
