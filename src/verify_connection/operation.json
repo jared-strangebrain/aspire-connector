@@ -1,8 +1,25 @@
 ﻿{
   "name": "verify_connection",
-  "title": "verify_connection",
-  "description": "verify_connection operation",
+  "title": "Verify connection",
+  "description": "Performs a lightweight GET to /api/Contacts to verify credentials and API reachability.",
   "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "service": "aspire",
+  "tags": ["utility", "auth"],
+  "isTrigger": false,
+  "input": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "$top": { "type": "integer", "minimum": 1, "default": 1 },
+        "$select": { "type": "string", "description": "Comma-separated fields to return, e.g. 'Id,Name'" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "output": {
+    "schema": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
 }

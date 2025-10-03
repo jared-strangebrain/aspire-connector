@@ -1,0 +1,1 @@
+{"type":"object","properties":{"$filter":{"type":"string"},"$select":{"type":"string"},"$orderby":{"type":"string"},"$top":{"type":"number"},"$skip":{"type":"number"},"$expand":{"type":"string"}},"additionalProperties":false,"$schema":"http://json-schema.org/draft-07/schema#","advanced":[]}
