@@ -1,15 +1,8 @@
 import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import type { AspireAuth } from "../Auth.js";
-
-/** ---- Types ---- */
-export type TokenRequestInput = {
-  client_id: string;
-  client_secret: string;
-  environment: "production" | "sandbox";
-};
-
-export type TokenRequestOutput = AspireAuth["user"];
+import type { TokenRequestInput } from "./input.js";
+import type { TokenRequestOutput } from "./output.js";
 
 /** ---- Constants ---- */
 const BASES = {

@@ -1,45 +1,56 @@
 // scripts/copy-operations.cjs
-// @ts-nocheck
-'use strict';
+/* eslint-disable no-console */
+const fs = require("fs");
+const path = require("path");
 
-/**
- * Copies `operation.json` and `test.ctx.json` from src/** to dist/**, preserving folders.
- */
-const fs = require('fs');
-const path = require('path');
+const SRC = path.resolve("src");
+const DIST = path.resolve("dist");
 
-const SRC_ROOT = path.join(process.cwd(), 'src');
-const DIST_ROOT = path.join(process.cwd(), 'dist');
-const FILENAMES = new Set(['operation.json', 'test.ctx.json']);
-
-async function copyFilePreserveTree(srcAbs) {
-  const rel = path.relative(SRC_ROOT, srcAbs);
-  const destAbs = path.join(DIST_ROOT, rel);
-  await fs.promises.mkdir(path.dirname(destAbs), { recursive: true });
-  await fs.promises.copyFile(srcAbs, destAbs);
-  console.log(
-    `copied ${rel.replace(/\\/g, '/')} -> ${path
-      .relative(DIST_ROOT, destAbs)
-      .replace(/\\/g, '/')}`
-  );
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
 }
 
-async function walk(dir) {
-  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      await walk(full);
-    } else if (entry.isFile() && FILENAMES.has(entry.name)) {
-      await copyFilePreserveTree(full);
+function copyIfExists(from, to) {
+  if (!fs.existsSync(from)) return false;
+  ensureDir(path.dirname(to));
+  fs.copyFileSync(from, to);
+  console.log(`copied ${path.relative(process.cwd(), from).replace(/\\/g,'/')}`
+    + ` -> ${path.relative(process.cwd(), to).replace(/\\/g,'/')}`);
+  return true;
+}
+
+function copyOp(opDir) {
+  const opName = path.basename(opDir);
+  const srcOpJson = path.join(opDir, "operation.json");
+  const srcCtxJson = path.join(opDir, "test.ctx.json");
+
+  const distOpDir = path.join(DIST, opName);
+  const distOpJson = path.join(distOpDir, "operation.json");
+  const distCtxJson = path.join(distOpDir, "test.ctx.json");
+
+  // operation.json (required for build/deploy)
+  copyIfExists(srcOpJson, distOpJson);
+
+  // test.ctx.json (optional but required by OperationHandlerTest during jest)
+  copyIfExists(srcCtxJson, distCtxJson);
+}
+
+function main() {
+  ensureDir(DIST);
+
+  // Iterate over immediate subdirs of src that look like operations
+  const entries = fs.readdirSync(SRC, { withFileTypes: true });
+  for (const e of entries) {
+    if (!e.isDirectory()) continue;
+    const opDir = path.join(SRC, e.name);
+    // Treat any dir containing operation.json as an operation
+    if (fs.existsSync(path.join(opDir, "operation.json"))) {
+      copyOp(opDir);
     }
   }
+
+  // If you keep a root-level test.ctx.json for anything, copy it to dist root:
+  copyIfExists(path.join(SRC, "test.ctx.json"), path.join(DIST, "test.ctx.json"));
 }
 
-(async () => {
-  await fs.promises.mkdir(DIST_ROOT, { recursive: true });
-  await walk(SRC_ROOT);
-})().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main();
