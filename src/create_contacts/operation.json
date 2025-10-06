@@ -3,6 +3,9 @@
   "title": "contacts.create",
   "description": "contacts.create operation",
   "version": "1.0.0",
+  "service": "aspire",
+  "isTrigger": false,
+  "tags": ["contacts","create"],
   "input": {
     "schema": {
       "type": "object",
