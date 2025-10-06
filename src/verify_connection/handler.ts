@@ -2,6 +2,7 @@
 import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import type { AspireAuth } from "../Auth.js";
+import { ensureBearer, getBaseUrlForEnvironment } from "../Auth.js";
 import type { VerifyConnectionInput } from "./input.js";
 import type { VerifyConnectionOutput } from "./output.js";
 
@@ -12,11 +13,10 @@ type Ctx = { auth?: { user?: AspireAuth["user"] } };
 
 // Unit-testable core implementation
 export const __impl = async (ctx: Ctx, input: VerifyConnectionInput) => {
-  const base = ctx?.auth?.user?.base_url;
-  if (!base) throw new Error("Missing base_url in auth context");
-
-  const token = ctx?.auth?.user?.access_token;
-  if (!token) throw new Error("Missing access_token in auth context");
+  const user = ctx?.auth?.user;
+  if (!user?.environment) throw new Error("Missing environment in auth context");
+  const base = user.base_url ?? getBaseUrlForEnvironment(user.environment as any);
+  const token = await ensureBearer(ctx as any);
 
   const url = new URL("/api/Contacts", base);
   url.searchParams.set("$top", String(input.$top ?? 1));

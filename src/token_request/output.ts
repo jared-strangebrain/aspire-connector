@@ -3,6 +3,6 @@ export type TokenRequestOutput = {
   access_token: string;
   refresh_token?: string;
   expires_at?: string;
-  environment: "production" | "sandbox";
+  environment: "production" | "sandbox" | "demo";
   base_url: string;
 };

@@ -8,6 +8,7 @@ import type { TokenRequestOutput } from "./output.js";
 const BASES = {
   production: "https://cloud-api.youraspire.com",
   sandbox: "https://cloudsandbox-api.youraspire.com",
+  demo: "https://clouddemo-api.youraspire.com",
 } as const;
 
 const AUTH = { mint: "/Authorization", refresh: "/Authorization/RefreshToken" } as const;

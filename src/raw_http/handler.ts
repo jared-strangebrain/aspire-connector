@@ -1,6 +1,7 @@
 import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import type { AspireAuth } from "../Auth.js";
+import { ensureBearer, getBaseUrlForEnvironment } from "../Auth.js";
 import type { RawHttpInput } from "./input.js";
 import type { RawHttpOutput } from "./output.js";
 
@@ -28,14 +29,17 @@ function buildUrl(
 
 const impl = async (ctx: Ctx, input: RawHttpInput) => {
   const base = ctx?.auth?.user?.base_url;
-  if (!base) throw new Error("Missing base_url in auth context");
+  const env = ctx?.auth?.user?.environment as any;
+  const resolvedBase = base ?? (env ? getBaseUrlForEnvironment(env) : undefined);
+  if (!resolvedBase) throw new Error("Missing environment or base_url in auth context");
 
-  const url = buildUrl(base, (input as any).path ?? "", (input as any).query);
+  const url = buildUrl(resolvedBase, (input as any).path ?? "", (input as any).query);
 
   // Merge headers (user-provided wins except we always provide Authorization if missing)
   const headers = new Headers((input as any).headers ?? {});
-  if (!headers.has("Authorization") && ctx?.auth?.user?.access_token) {
-    headers.set("Authorization", `Bearer ${ctx.auth!.user!.access_token}`);
+  if (!headers.has("Authorization")) {
+    const token = await ensureBearer(ctx as any);
+    headers.set("Authorization", `Bearer ${token}`);
   }
   if (!headers.has("Accept")) headers.set("Accept", "application/json");
 

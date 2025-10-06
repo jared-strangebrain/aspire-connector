@@ -1,7 +1,7 @@
-﻿import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
+import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
 import { __impl as listUsersImpl } from './handler.js';
 
-type Ctx = { auth?: { user?: { base_url?: string; access_token?: string } } };
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string; environment?: 'sandbox' } } };
 
 describe('list_users (direct impl)', () => {
   const originalFetch = global.fetch as any;
@@ -22,7 +22,7 @@ describe('list_users (direct impl)', () => {
   });
 
   it('calls /api/Users with Bearer token and returns JSON', async () => {
-    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123' } } };
+    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123', environment: 'sandbox' } } };
     const out = await listUsersImpl(ctx as any, { $top: 1 });
 
     const call = (global.fetch as jest.Mock).mock.calls[0];
