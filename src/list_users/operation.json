@@ -3,9 +3,9 @@
   "title": "users.list",
   "description": "users.list operation",
   "version": "1.0.0",
-  "service": { "id": "aspire", "name": "Aspire" },
+  "service": "aspire",
   "isTrigger": false,
-  "tags": [{ "name": "users" }, { "name": "list" }],
+  "tags": ["users","list"],
   "input": { "schema": { "type": "object", "properties": {} } },
   "output": { "schema": { "type": "object", "properties": {} } }
 }
