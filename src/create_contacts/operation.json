@@ -1,8 +1,16 @@
-﻿{
+{
   "name": "contacts.create",
   "title": "contacts.create",
   "description": "contacts.create operation",
   "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "input": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "body": { "type": "object", "description": "Contact payload per Aspire API" }
+      },
+      "required": ["body"]
+    }
+  },
+  "output": { "schema": { "type": ["object", "string"], "description": "Created contact or message" } }
 }

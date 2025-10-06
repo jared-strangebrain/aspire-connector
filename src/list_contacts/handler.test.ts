@@ -1,8 +1,8 @@
-﻿// src/list_contacts/handler.test.ts
+// src/list_contacts/handler.test.ts
 import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
 import { __impl as listContactsImpl } from './handler.js';
 
-type Ctx = { auth?: { user?: { base_url?: string; access_token?: string } } };
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string; environment?: 'sandbox' } } };
 
 describe('list_contacts (direct impl)', () => {
   const originalFetch = global.fetch as any;
@@ -23,7 +23,7 @@ describe('list_contacts (direct impl)', () => {
   });
 
   it('calls /api/Contacts with Bearer token and respects OData params', async () => {
-    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123' } } };
+    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123', environment: 'sandbox' } } };
     const out = await listContactsImpl(ctx as any, { $top: 2, $select: 'id,name' });
 
     const call = (global.fetch as jest.Mock).mock.calls[0];

@@ -1,7 +1,7 @@
-﻿import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
+import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
 import { __impl as listOpportunitiesImpl } from './handler.js';
 
-type Ctx = { auth?: { user?: { base_url?: string; access_token?: string } } };
+type Ctx = { auth?: { user?: { base_url?: string; access_token?: string; environment?: 'sandbox' } } };
 
 describe('list_opportunities (direct impl)', () => {
   let originalFetch: typeof fetch | undefined;
@@ -23,7 +23,7 @@ describe('list_opportunities (direct impl)', () => {
   });
 
   it('calls /api/Opportunities with Bearer token and OData params', async () => {
-    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123' } } };
+    const ctx: Ctx = { auth: { user: { base_url: 'https://example.test', access_token: 'abc123', environment: 'sandbox' } } };
     const out = await listOpportunitiesImpl(ctx as any, { $top: 5, $select: 'id,name' } as any);
 
     const [url, init] = (global.fetch as jest.Mock).mock.calls[0] as [string, any];

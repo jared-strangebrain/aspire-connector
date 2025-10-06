@@ -1,1 +1,1 @@
-export type CreateContactsOutput = string;
+export type CreateContactsOutput = Record<string, unknown>;

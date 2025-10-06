@@ -2,6 +2,7 @@
 import { OperationHandlerSetup } from "@trayio/cdk-dsl/connector/operation/OperationHandlerSetup";
 import { OperationHandlerResult } from "@trayio/cdk-dsl/connector/operation/OperationHandler";
 import type { AspireAuth } from "../Auth.js";
+import { ensureBearer, getBaseUrlForEnvironment } from "../Auth.js";
 import type { CreateContactsInput } from "./input.js";
 import type { CreateContactsOutput } from "./output.js";
 
@@ -11,17 +12,19 @@ const IS_TEST = !!process.env.JEST_WORKER_ID;
 type Ctx = { auth?: { user?: AspireAuth["user"] } };
 
 const impl = async (ctx: Ctx, input: CreateContactsInput) => {
-  const base = ctx?.auth?.user?.base_url;
-  if (!base) throw new Error("Missing base_url in auth context");
+  const user = ctx?.auth?.user;
+  if (!user?.environment) throw new Error("Missing environment in auth context");
+  const base = user.base_url ?? getBaseUrlForEnvironment(user.environment as any);
 
   const url = new URL("/api/Contacts", base);
   // support both `{ body: {...} }` and direct object payloads
   const payload = (input as { body?: unknown }).body ?? (input as unknown) ?? {};
 
+  const token = await ensureBearer(ctx as any);
   const res = await fetch(url.toString(), {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${ctx!.auth!.user!.access_token}`,
+      Authorization: `Bearer ${token}`,
       Accept: "application/json",
       "Content-Type": "application/json",
     },

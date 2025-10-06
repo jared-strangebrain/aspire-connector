@@ -1,8 +1,20 @@
-﻿{
+{
   "name": "contacts.list",
   "title": "contacts.list",
   "description": "contacts.list operation",
   "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "input": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "$filter": { "type": "string", "description": "OData $filter expression" },
+        "$select": { "type": "string", "description": "Comma-separated fields" },
+        "$orderby": { "type": "string", "description": "OData order by" },
+        "$top": { "type": "integer", "minimum": 1, "description": "Max records to return" },
+        "$skip": { "type": "integer", "minimum": 0, "description": "Records to skip" },
+        "$expand": { "type": "string", "description": "OData expand expression" }
+      }
+    }
+  },
+  "output": { "schema": { "type": ["object", "array", "string"], "description": "Pass-through of Aspire response" } }
 }
