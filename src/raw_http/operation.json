@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "service": "aspire",
   "isTrigger": false,
-  "tags": ["utility","http"],
+  "tags": ["utility", "http"],
   "input": {
     "schema": {
       "type": "object",
@@ -22,5 +22,10 @@
       "required": ["method"]
     }
   },
-  "output": { "schema": { "type": ["object","array","string"], "description": "Response as JSON, text, or base64 bytes" } }
+  "output": {
+    "schema": {
+      "type": ["object","array","string"],
+      "description": "Response as JSON, text, or base64 bytes"
+    }
+  }
 }
