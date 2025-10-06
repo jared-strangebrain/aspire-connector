@@ -1,8 +1,11 @@
-﻿{
+{
   "name": "tasks.create",
   "title": "tasks.create",
   "description": "tasks.create operation",
   "version": "1.0.0",
+  "service": "aspire",
+  "isTrigger": false,
+  "tags": ["tasks","create"],
   "input": { "schema": { "type": "object", "properties": {} } },
   "output": { "schema": { "type": "object", "properties": {} } }
 }

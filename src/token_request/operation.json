@@ -1,8 +1,0 @@
-﻿{
-  "name": "token_request",
-  "title": "token_request",
-  "description": "token_request operation",
-  "version": "1.0.0",
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
-}

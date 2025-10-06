@@ -3,6 +3,9 @@
   "title": "contacts.list",
   "description": "contacts.list operation",
   "version": "1.0.0",
+  "service": "aspire",
+  "isTrigger": false,
+  "tags": ["contacts","list"],
   "input": {
     "schema": {
       "type": "object",

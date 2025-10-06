@@ -1,8 +1,11 @@
-﻿{
+{
   "name": "opportunities.list",
   "title": "opportunities.list",
   "description": "opportunities.list operation",
   "version": "1.0.0",
+  "service": "aspire",
+  "isTrigger": false,
+  "tags": ["opportunities","list"],
   "input": { "schema": { "type": "object", "properties": {} } },
   "output": { "schema": { "type": "object", "properties": {} } }
 }

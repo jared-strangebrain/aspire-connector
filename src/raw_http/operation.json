@@ -3,6 +3,9 @@
   "title": "raw_http",
   "description": "raw_http operation",
   "version": "1.0.0",
+  "service": "aspire",
+  "isTrigger": false,
+  "tags": ["utility","http"],
   "input": {
     "schema": {
       "type": "object",
