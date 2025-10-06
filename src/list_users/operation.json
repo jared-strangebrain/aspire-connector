@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "users.list",
   "title": "users.list",
   "description": "users.list operation",
@@ -9,3 +9,4 @@
   "input": { "schema": { "type": "object", "properties": {} } },
   "output": { "schema": { "type": "object", "properties": {} } }
 }
+
