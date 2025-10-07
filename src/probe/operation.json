@@ -1,11 +1,5 @@
 {
   "name": "probe",
-  "title": "probe",
-  "description": "Minimal action used to validate operation metadata shape with the local CDK.",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["utility"],
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "title": "Probe",
+  "description": ""
 }

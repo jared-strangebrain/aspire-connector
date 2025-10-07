@@ -1,11 +1,5 @@
 {
-  "name": "issues.create",
-  "title": "issues.create",
-  "description": "issues.create operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["issues","create"],
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "name": "create_issues",
+  "title": "Create issues",
+  "description": ""
 }

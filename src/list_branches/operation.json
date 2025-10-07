@@ -1,11 +1,5 @@
 {
-  "name": "branches.list",
-  "title": "branches.list",
-  "description": "branches.list operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["branches","list","utility"],
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "name": "list_branches",
+  "title": "List branches",
+  "description": ""
 }

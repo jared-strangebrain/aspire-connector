@@ -1,11 +1,5 @@
 {
-  "name": "contact_types.list",
-  "title": "contact_types.list",
-  "description": "contact_types.list operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["contacts","types","list"],
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "name": "list_contact_types",
+  "title": "List contact types",
+  "description": ""
 }

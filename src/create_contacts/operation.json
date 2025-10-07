@@ -1,19 +1,5 @@
 {
-  "name": "contacts.create",
-  "title": "contacts.create",
-  "description": "contacts.create operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["contacts","create"],
-  "input": {
-    "schema": {
-      "type": "object",
-      "properties": {
-        "body": { "type": "object", "description": "Contact payload per Aspire API" }
-      },
-      "required": ["body"]
-    }
-  },
-  "output": { "schema": { "type": ["object", "string"], "description": "Created contact or message" } }
+  "name": "create_contacts",
+  "title": "Create contacts",
+  "description": ""
 }

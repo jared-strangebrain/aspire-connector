@@ -1,11 +1,5 @@
 {
-  "name": "users.list",
-  "title": "users.list",
-  "description": "users.list operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["users","list"],
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "name": "list_users",
+  "title": "List users",
+  "description": ""
 }

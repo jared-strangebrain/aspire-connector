@@ -1,1 +1,13 @@
-{"name":"aspire-cdk-connector","title":"Aspire Connector","version":"0.1.6","description":"Aspire Cloud API connector with Tray-managed auth and raw HTTP","rawHttp":{"enabled":true}}
+{
+  "name": "aspire-cdk-connector",
+  "version": "1.0",
+  "title": "Aspire Connector",
+  "description": "",
+  "service": {
+    "name": " xy93Pi3w0gJbXz_convex-aspire",
+    "version": "1"
+  },
+  "tags": ["service"],
+  "isTrigger": false,
+  "rawHttp": { "enabled": true }
+}

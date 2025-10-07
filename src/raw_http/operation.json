@@ -1,26 +1,5 @@
 {
   "name": "raw_http",
-  "title": "raw_http",
-  "description": "raw_http operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["utility","http"],
-  "input": {
-    "schema": {
-      "type": "object",
-      "properties": {
-        "method": { "type": "string", "enum": ["GET","POST","PUT","PATCH","DELETE","HEAD","OPTIONS"] },
-        "path": { "type": "string", "description": "Relative or absolute path" },
-        "query": { "type": "object", "additionalProperties": { "type": ["string","number","boolean"] } },
-        "headers": { "type": "object", "additionalProperties": { "type": "string" } },
-        "json": { "type": ["object","array","boolean","number","string","null"] },
-        "text": { "type": "string" },
-        "base64": { "type": "string", "description": "Body as base64" },
-        "response": { "type": "string", "enum": ["json","text","bytes"], "default": "json" }
-      },
-      "required": ["method"]
-    }
-  },
-  "output": { "schema": { "type": ["object","array","string"], "description": "Response as JSON, text, or base64 bytes" } }
+  "title": "Raw HTTP",
+  "description": ""
 }
