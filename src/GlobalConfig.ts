@@ -1,1 +1,1 @@
-export const globalConfigHttp: Record<string, unknown> = {};
+export const globalConfigHttp: any = {};
