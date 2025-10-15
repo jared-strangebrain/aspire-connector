@@ -1,13 +1,1 @@
-{
-  "name": "aspire-cdk-connector",
-  "version": "1.0",
-  "title": "Aspire Connector",
-  "description": "",
-  "service": {
-    "name": " xy93Pi3w0gJbXz_convex-aspire",
-    "version": "1"
-  },
-  "tags": ["service"],
-  "isTrigger": false,
-  "rawHttp": { "enabled": true }
-}
+{"name":"convex-aspire","version":"1.0","title":"Aspire Connector","description":"","service":{"name":"xy93Pi3w0gJbXz_convex-aspire","version":"1.0"},"tags":["service"],"isTrigger":false,"rawHttp":{"enabled":true}}

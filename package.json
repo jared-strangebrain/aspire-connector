@@ -1,5 +1,5 @@
 {
-  "name": "aspire-cdk-connector",
+  "name": "convex-aspire",
   "version": "0.1.6",
   "description": "Aspire Cloud API connector (Prod/Sandbox) with auto auth refresh; composite+fetch handlers",
   "license": "UNLICENSED",
@@ -7,13 +7,14 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && tsc -p . && node scripts/copy-operations.cjs",
-    "compile": "npm run build",
+    "compile": "tsc --build",
     "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --config jest.config.cjs",
     "lint": "echo \"no lint configured\"",
     "posttest": "node scripts/strip-dist-ctx.cjs"
   },
   "devDependencies": {
-    "@trayio/cdk-runtime": "^4.99.0",
+    "@trayio/cdk-dsl": "4.103.0",
+    "@trayio/cdk-runtime": "4.103.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.11.27",
     "cross-env": "^10.0.0",
@@ -22,6 +23,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@trayio/cdk-dsl": "^4.99.0"
+    "@trayio/cdk-runtime": "4.103.0",
+    "@trayio/cdk-dsl": "4.103.0"
   }
 }
