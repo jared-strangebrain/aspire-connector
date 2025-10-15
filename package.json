@@ -8,6 +8,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && tsc -p . && node scripts/copy-operations.cjs",
     "compile": "npm run build",
+    "precompile": "npm ls @trayio/cdk-runtime --all || true",
     "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --config jest.config.cjs",
     "lint": "echo \"no lint configured\"",
     "posttest": "node scripts/strip-dist-ctx.cjs",
