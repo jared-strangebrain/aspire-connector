@@ -1,11 +1,5 @@
 {
   "name": "token_request",
-  "title": "token_request",
-  "description": "token_request operation",
-  "version": "1.0.0",
-  "service": "aspire",
-  "isTrigger": false,
-  "tags": ["auth","token"],
-  "input": { "schema": { "type": "object", "properties": {} } },
-  "output": { "schema": { "type": "object", "properties": {} } }
+  "title": "Token request",
+  "description": "Mint or refresh Aspire access tokens"
 }
