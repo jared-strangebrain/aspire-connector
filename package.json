@@ -10,13 +10,14 @@
     "compile": "npm run build",
     "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --config jest.config.cjs",
     "lint": "echo \"no lint configured\"",
-    "posttest": "node scripts/strip-dist-ctx.cjs"
+    "posttest": "node scripts/strip-dist-ctx.cjs",
+    "postinstall": "npm dedupe || true"
   },
   "dependencies": {
-    "@trayio/cdk-dsl": "4.103.0"
+    "@trayio/cdk-dsl": "4.103.0",
+    "@trayio/cdk-runtime": "4.103.0"
   },
   "devDependencies": {
-    "@trayio/cdk-runtime": "4.103.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.11.27",
     "cross-env": "^10.0.0",
@@ -29,5 +30,10 @@
     "@trayio/connectors-domain": {
       "@trayio/cdk-runtime": "4.103.0"
     }
-  }
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=8.3.0"
+  },
+  "packageManager": "npm@10.9.2"
 }
