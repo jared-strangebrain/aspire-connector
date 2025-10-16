@@ -1,0 +1,5 @@
+{
+  "name": "version_get_api_version",
+  "title": "Version Get Api Version",
+  "description": "GET /Version/GetApiVersion"
+}

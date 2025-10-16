@@ -1,0 +1,5 @@
+{
+  "name": "service_type_integration_codes_get",
+  "title": "Service Type Integration Codes Get",
+  "description": "GET /ServiceTypeIntegrationCodes"
+}

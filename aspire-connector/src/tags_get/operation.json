@@ -1,0 +1,5 @@
+{
+  "name": "tags_get",
+  "title": "Tags Get",
+  "description": "GET /Tags"
+}

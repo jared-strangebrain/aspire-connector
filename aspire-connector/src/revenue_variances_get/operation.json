@@ -1,0 +1,5 @@
+{
+  "name": "revenue_variances_get",
+  "title": "Revenue Variances Get",
+  "description": "GET /RevenueVariances"
+}

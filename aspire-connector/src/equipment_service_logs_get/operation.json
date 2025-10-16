@@ -1,0 +1,5 @@
+{
+  "name": "equipment_service_logs_get",
+  "title": "Equipment Service Logs Get",
+  "description": "GET /EquipmentServiceLogs"
+}

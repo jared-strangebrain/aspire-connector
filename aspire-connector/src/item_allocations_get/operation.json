@@ -1,0 +1,5 @@
+{
+  "name": "item_allocations_get",
+  "title": "Item Allocations Get",
+  "description": "GET /ItemAllocations"
+}

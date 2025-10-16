@@ -1,0 +1,5 @@
+{
+  "name": "inventory_locations_get",
+  "title": "Inventory Locations Get",
+  "description": "GET /InventoryLocations"
+}

@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"ContactCustomFieldValueID":{"type":"number"},"ContactCustomFieldDefinitionID":{"type":"number"},"ContactID":{"type":"number"},"ColumnValue":{"type":"string"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

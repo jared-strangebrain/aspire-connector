@@ -1,0 +1,5 @@
+{
+  "name": "job_statuses_get",
+  "title": "Job Statuses Get",
+  "description": "GET /JobStatuses"
+}

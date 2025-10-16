@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"PropertyId":{"type":"number"},"DayOfWeek":{"type":"number"},"StartTime":{"type":"string"},"EndTime":{"type":"string"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

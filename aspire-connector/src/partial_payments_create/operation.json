@@ -1,0 +1,5 @@
+{
+  "name": "partial_payments_create",
+  "title": "Partial Payments Create",
+  "description": "POST /PartialPayments"
+}

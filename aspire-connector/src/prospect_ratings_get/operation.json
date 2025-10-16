@@ -1,0 +1,5 @@
+{
+  "name": "prospect_ratings_get",
+  "title": "Prospect Ratings Get",
+  "description": "GET /ProspectRatings"
+}

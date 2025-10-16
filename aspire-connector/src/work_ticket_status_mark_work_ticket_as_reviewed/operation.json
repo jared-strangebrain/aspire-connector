@@ -1,0 +1,5 @@
+{
+  "name": "work_ticket_status_mark_work_ticket_as_reviewed",
+  "title": "Work Ticket Status Mark Work Ticket As Reviewed",
+  "description": "POST /WorkTicketStatus/MarkWorkTicketAsReviewed"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "service_tax_overrides_post",
+  "title": "Service Tax Overrides Post",
+  "description": "POST /ServiceTaxOverrides"
+}

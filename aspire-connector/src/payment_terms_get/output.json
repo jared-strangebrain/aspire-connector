@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"PaymentTermsID":{"type":"number"},"Terms":{"type":"string"},"NumberOfDays":{"type":"number"},"Active":{"type":"boolean"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

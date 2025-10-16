@@ -1,0 +1,5 @@
+{
+  "name": "invoice_batches_get",
+  "title": "Invoice Batches Get",
+  "description": "GET /InvoiceBatches"
+}

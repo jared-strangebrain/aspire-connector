@@ -1,0 +1,13 @@
+{
+  "auth": {
+    "user": {
+      "access_token": "YOUR_ACCESS_TOKEN_HERE",
+      "refresh_token": "YOUR_REFRESH_TOKEN_HERE",
+      "expires_at": "2025-12-31T23:59:59Z",
+      "environment": "production",
+      "client_id": "YOUR_CLIENT_ID_HERE",
+      "client_secret": "YOUR_CLIENT_SECRET_HERE"
+    },
+    "app": {}
+  }
+}

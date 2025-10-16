@@ -1,0 +1,5 @@
+{
+  "name": "authorization_refresh_token",
+  "title": "Authorization Refresh Token",
+  "description": "POST /Authorization/RefreshToken"
+}

@@ -1,0 +1,9036 @@
+[
+  {
+    "name": "work_ticket_visits_get",
+    "operationId": "WorkTicketVisits_Get",
+    "path": "/WorkTicketVisits",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTicketVisits.ODataModel.WorkTicketVisit"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketVisits"
+    ]
+  },
+  {
+    "name": "work_ticket_visit_notes_get",
+    "operationId": "WorkTicketVisitNotes_Get",
+    "path": "/WorkTicketVisitNotes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTicketVisits.ODataModel.WorkTicketVisitNote"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketVisitNotes"
+    ]
+  },
+  {
+    "name": "work_ticket_times_get",
+    "operationId": "WorkTicketTimes_Get",
+    "path": "/WorkTicketTimes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTicketTimes.ODataModel.WorkTicketTime"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketTimes"
+    ]
+  },
+  {
+    "name": "work_ticket_status_mark_work_ticket_as_reviewed",
+    "operationId": "WorkTicketStatus_MarkWorkTicketAsReviewed",
+    "path": "/WorkTicketStatus/MarkWorkTicketAsReviewed",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.WorkTicketStatus.Model.MarkWorkTicketAsReviewedRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketStatus"
+    ]
+  },
+  {
+    "name": "work_tickets_get",
+    "operationId": "WorkTickets_Get",
+    "path": "/WorkTickets",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTickets.ODataModel.WorkTicket"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTickets"
+    ]
+  },
+  {
+    "name": "work_tickets_create_as_needed_work_tickets",
+    "operationId": "WorkTickets_CreateAsNeededWorkTickets",
+    "path": "/WorkTickets/CreateAsNeededWorkTickets",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.WorkTickets.CreateAsNeededWorkTicketRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTickets"
+    ]
+  },
+  {
+    "name": "work_ticket_revenues_get",
+    "operationId": "WorkTicketRevenues_Get",
+    "path": "/WorkTicketRevenues",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTicketRevenues.ODataModel.WorkTicketRevenueModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketRevenues"
+    ]
+  },
+  {
+    "name": "work_ticket_items_get",
+    "operationId": "WorkTicketItems_Get",
+    "path": "/WorkTicketItems",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTickets.ODataModel.WorkTicketItemModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketItems"
+    ]
+  },
+  {
+    "name": "work_ticket_canceled_reasons_get",
+    "operationId": "WorkTicketCanceledReasons_Get",
+    "path": "/WorkTicketCanceledReasons",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkTicketCanceledReasons.ODataModel.WorkTicketCanceledReason"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkTicketCanceledReasons"
+    ]
+  },
+  {
+    "name": "workers_comps_get",
+    "operationId": "WorkersComps_Get",
+    "path": "/WorkersComps",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.WorkersComp.ODataModel.WorkersComp"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "WorkersComps"
+    ]
+  },
+  {
+    "name": "version_get_api_version",
+    "operationId": "Version_GetApiVersion",
+    "path": "/Version/GetApiVersion",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 1
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Version"
+    ]
+  },
+  {
+    "name": "vendors_get",
+    "operationId": "Vendors_Get",
+    "path": "/Vendors",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Vendors.ODataModel.Vendor"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Vendors"
+    ]
+  },
+  {
+    "name": "users_get",
+    "operationId": "Users_Get",
+    "path": "/Users",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Users.ODataModel.User"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Users"
+    ]
+  },
+  {
+    "name": "unit_types_get",
+    "operationId": "UnitTypes_Get",
+    "path": "/UnitTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.UnitTypes.ODataModel.UnitType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "UnitTypes"
+    ]
+  },
+  {
+    "name": "tax_jurisdictions_get",
+    "operationId": "TaxJurisdictions_Get",
+    "path": "/TaxJurisdictions",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TaxJurisdictions.ODataModel.TaxJurisdiction"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "TaxJurisdictions"
+    ]
+  },
+  {
+    "name": "tax_entities_get",
+    "operationId": "TaxEntities_Get",
+    "path": "/TaxEntities",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TaxEntities.ODataModel.TaxEntity"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "TaxEntities"
+    ]
+  },
+  {
+    "name": "takeoff_items_get",
+    "operationId": "TakeoffItems_Get",
+    "path": "/TakeoffItems",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TakeOff.ODataModel.TakeoffItem"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "TakeoffItems"
+    ]
+  },
+  {
+    "name": "takeoff_groups_get",
+    "operationId": "TakeoffGroups_Get",
+    "path": "/TakeoffGroups",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TakeOff.ODataModel.TakeoffGroup"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "TakeoffGroups"
+    ]
+  },
+  {
+    "name": "tags_get",
+    "operationId": "Tags_Get",
+    "path": "/Tags",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Tags.ODataModel.Tag"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Tags"
+    ]
+  },
+  {
+    "name": "service_types_get",
+    "operationId": "ServiceTypes_Get",
+    "path": "/ServiceTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ServiceTypes.ODataModel.ServiceType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ServiceTypes"
+    ]
+  },
+  {
+    "name": "service_type_integration_codes_get",
+    "operationId": "ServiceTypeIntegrationCodes_Get",
+    "path": "/ServiceTypeIntegrationCodes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ServiceTypeIntegrationCodes.ODataModel.ServiceTypeIntegrationCode"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ServiceTypeIntegrationCodes"
+    ]
+  },
+  {
+    "name": "service_tax_overrides_post",
+    "operationId": "ServiceTaxOverrides_Post",
+    "path": "/ServiceTaxOverrides",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.ServiceTaxOverrides.Model.Request.ServiceTaxOverrideInsertRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/octet-stream": {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ServiceTaxOverrides"
+    ]
+  },
+  {
+    "name": "services_get",
+    "operationId": "Services_Get",
+    "path": "/Services",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Services.ODataModel.Service"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Services"
+    ]
+  },
+  {
+    "name": "sales_types_get",
+    "operationId": "SalesTypes_Get",
+    "path": "/SalesTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.SalesTypes.ODataModel.SalesType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "SalesTypes"
+    ]
+  },
+  {
+    "name": "routes_get",
+    "operationId": "Routes_Get",
+    "path": "/Routes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Routes.ODataModel.Route"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Routes"
+    ]
+  },
+  {
+    "name": "roles_get",
+    "operationId": "Roles_Get",
+    "path": "/Roles",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Roles.ODataModel.Role"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Roles"
+    ]
+  },
+  {
+    "name": "revenue_variances_get",
+    "operationId": "RevenueVariances_Get",
+    "path": "/RevenueVariances",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.RevenueVariances.ODataModel.RevenueVariance"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "RevenueVariances"
+    ]
+  },
+  {
+    "name": "regions_get",
+    "operationId": "Regions_Get",
+    "path": "/Regions",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Regions.ODataModel.Region"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Regions"
+    ]
+  },
+  {
+    "name": "receipt_statuses_get",
+    "operationId": "ReceiptStatuses_Get",
+    "path": "/ReceiptStatuses",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ReceiptStatuses.ODataModel.ReceiptStatusModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ReceiptStatuses"
+    ]
+  },
+  {
+    "name": "receipts_get",
+    "operationId": "Receipts_Get",
+    "path": "/Receipts",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PurchaseReceipt.ODataModel.Receipt"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Receipts"
+    ]
+  },
+  {
+    "name": "receipts_approve_receipt",
+    "operationId": "Receipts_ApproveReceipt",
+    "path": "/Receipts/Approve",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.Receipts.Model.Request.ApproveReceiptRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Receipts"
+    ]
+  },
+  {
+    "name": "receipts_receive_receipt",
+    "operationId": "Receipts_ReceiveReceipt",
+    "path": "/Receipts/Receive",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.Receipts.Model.Request.ReceiveReceiptRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "Receipts"
+    ]
+  },
+  {
+    "name": "prospect_ratings_get",
+    "operationId": "ProspectRatings_Get",
+    "path": "/ProspectRatings",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ProspectRatings.ODataModel.ProspectRating"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ProspectRatings"
+    ]
+  },
+  {
+    "name": "property_types_get",
+    "operationId": "PropertyTypes_Get",
+    "path": "/PropertyTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PropertyTypes.ODataModel.PropertyType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyTypes"
+    ]
+  },
+  {
+    "name": "property_statuses_get",
+    "operationId": "PropertyStatuses_Get",
+    "path": "/PropertyStatuses",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PropertyStatuses.ODataModel.PropertyStatus"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyStatuses"
+    ]
+  },
+  {
+    "name": "property_groups_get",
+    "operationId": "PropertyGroups_Get",
+    "path": "/PropertyGroups",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PropertyGroups.ODataModel.PropertyGroup"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyGroups"
+    ]
+  },
+  {
+    "name": "property_custom_fields_get",
+    "operationId": "PropertyCustomFields_Get",
+    "path": "/PropertyCustomFields",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PropertyCustomField.ODataModel.TableExtenderDetail"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyCustomFields"
+    ]
+  },
+  {
+    "name": "property_custom_field_definitions_get",
+    "operationId": "PropertyCustomFieldDefinitions_Get",
+    "path": "/PropertyCustomFieldDefinitions",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TableExtender.ODataModel.Property.TableExtenderHeader"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyCustomFieldDefinitions"
+    ]
+  },
+  {
+    "name": "property_contacts_get",
+    "operationId": "PropertyContacts_Get",
+    "path": "/PropertyContacts",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Properties.ODataModel.PropertyContactDataModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyContacts"
+    ]
+  },
+  {
+    "name": "property_availabilities_get",
+    "operationId": "PropertyAvailabilities_Get",
+    "path": "/PropertyAvailabilities",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PropertyAvailabilities.ODataModel.PropertyAvailability"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PropertyAvailabilities"
+    ]
+  },
+  {
+    "name": "properties_get",
+    "operationId": "Properties_Get",
+    "path": "/Properties",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Properties.ODataModel.Property"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Properties"
+    ]
+  },
+  {
+    "name": "pay_schedules_get",
+    "operationId": "PaySchedules_Get",
+    "path": "/PaySchedules",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PaySchedules.ODataModel.PaySchedule"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PaySchedules"
+    ]
+  },
+  {
+    "name": "pay_rates_get",
+    "operationId": "PayRates_Get",
+    "path": "/PayRates",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PayRates.ODataModel.PayRate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PayRates"
+    ]
+  },
+  {
+    "name": "pay_rate_override_pay_codes_get",
+    "operationId": "PayRateOverridePayCodes_Get",
+    "path": "/PayRateOverridePayCodes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PayCodes.ODataModel.PayRateOverridePayCode"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PayRateOverridePayCodes"
+    ]
+  },
+  {
+    "name": "payment_terms_get",
+    "operationId": "PaymentTerms_Get",
+    "path": "/PaymentTerms",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PaymentTermsNS.ODataModel.PaymentTerms"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PaymentTerms"
+    ]
+  },
+  {
+    "name": "payments_get",
+    "operationId": "Payments_Get",
+    "path": "/Payments",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Payments.ODataModel.Payment"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Payments"
+    ]
+  },
+  {
+    "name": "payment_categories_get",
+    "operationId": "PaymentCategories_Get",
+    "path": "/PaymentCategories",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PaymentCategories.ODataModel.PaymentCategory"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PaymentCategories"
+    ]
+  },
+  {
+    "name": "pay_codes_get",
+    "operationId": "PayCodes_Get",
+    "path": "/PayCodes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.PayCodes.ODataModel.PayCodeModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PayCodes"
+    ]
+  },
+  {
+    "name": "partial_payments_create",
+    "operationId": "PartialPayments_Create",
+    "path": "/PartialPayments",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "partialPaymentInsert",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.PartialPayments.Model.PartialPaymentInsertRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "PartialPayments"
+    ]
+  },
+  {
+    "name": "opportunity_tags_get",
+    "operationId": "OpportunityTags_Get",
+    "path": "/OpportunityTags",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Opportunities.ODataModel.OpportunityTag"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityTags"
+    ]
+  },
+  {
+    "name": "opportunity_tags_delete",
+    "operationId": "OpportunityTags_Delete",
+    "path": "/OpportunityTags/{id}",
+    "method": "DELETE",
+    "parameters": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "x-position": 1
+      },
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityTags"
+    ]
+  },
+  {
+    "name": "opportunity_statuses_get",
+    "operationId": "OpportunityStatuses_Get",
+    "path": "/OpportunityStatuses",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.ExternalApi.OpportunityStatus.Model.OpportunityStatusModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityStatuses"
+    ]
+  },
+  {
+    "name": "opportunity_services_get",
+    "operationId": "OpportunityServices_Get",
+    "path": "/OpportunityServices",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.OpportunityServices.ODataModel.OpportunityService"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityServices"
+    ]
+  },
+  {
+    "name": "opportunity_service_kit_items_get",
+    "operationId": "OpportunityServiceKitItems_Get",
+    "path": "/OpportunityServiceKitItems",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Opportunities.ODataModel.OpportunityServiceKitItem"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityServiceKitItems"
+    ]
+  },
+  {
+    "name": "opportunity_service_items_get",
+    "operationId": "OpportunityServiceItems_Get",
+    "path": "/OpportunityServiceItems",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Opportunities.ODataModel.OpportunityServiceItem"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityServiceItems"
+    ]
+  },
+  {
+    "name": "opportunity_service_groups_get",
+    "operationId": "OpportunityServiceGroups_Get",
+    "path": "/OpportunityServiceGroups",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.OpportunityServiceGroups.ODataModel.OpportunityServiceGroup"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityServiceGroups"
+    ]
+  },
+  {
+    "name": "opportunity_lost_reasons_get",
+    "operationId": "OpportunityLostReasons_Get",
+    "path": "/OpportunityLostReasons",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.OpportunityLostReasons.ODataModel.OpportunityLostReason"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "OpportunityLostReasons"
+    ]
+  },
+  {
+    "name": "opportunities_get",
+    "operationId": "Opportunities_Get",
+    "path": "/Opportunities",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Opportunities.ODataModel.Opportunity"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Opportunities"
+    ]
+  },
+  {
+    "name": "object_codes_get",
+    "operationId": "ObjectCodes_Get",
+    "path": "/ObjectCodes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 1
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ObjectCodes"
+    ]
+  },
+  {
+    "name": "job_statuses_get",
+    "operationId": "JobStatuses_Get",
+    "path": "/JobStatuses",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.ExternalApi.JobStatuses.Model.JobStatusModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "JobStatuses"
+    ]
+  },
+  {
+    "name": "jobs_get",
+    "operationId": "Jobs_Get",
+    "path": "/Jobs",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Jobs.ODataModel.Job"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Jobs"
+    ]
+  },
+  {
+    "name": "item_allocations_get",
+    "operationId": "ItemAllocations_Get",
+    "path": "/ItemAllocations",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ItemAllocations.ODataModel.ItemAllocation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ItemAllocations"
+    ]
+  },
+  {
+    "name": "invoice_taxes_get",
+    "operationId": "InvoiceTaxes_Get",
+    "path": "/InvoiceTaxes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.InvoiceTaxes.ODataModel.InvoiceTax"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "InvoiceTaxes"
+    ]
+  },
+  {
+    "name": "invoices_get",
+    "operationId": "Invoices_Get",
+    "path": "/Invoices",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Invoices.ODataModel.Invoice"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Invoices"
+    ]
+  },
+  {
+    "name": "invoice_revenues_get",
+    "operationId": "InvoiceRevenues_Get",
+    "path": "/InvoiceRevenues",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.InvoiceRevenues.ODataModel.InvoiceRevenue"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "InvoiceRevenues"
+    ]
+  },
+  {
+    "name": "invoice_batches_get",
+    "operationId": "InvoiceBatches_Get",
+    "path": "/InvoiceBatches",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.InvoiceBatches.ODataModel.InvoiceBatch"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "InvoiceBatches"
+    ]
+  },
+  {
+    "name": "inventory_locations_get",
+    "operationId": "InventoryLocations_Get",
+    "path": "/InventoryLocations",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.InventoryLocations.ODataModel.InventoryLocation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "InventoryLocations"
+    ]
+  },
+  {
+    "name": "equipment_sizes_get",
+    "operationId": "EquipmentSizes_Get",
+    "path": "/EquipmentSizes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentSizes.ODataModel.EquipmentSize"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentSizes"
+    ]
+  },
+  {
+    "name": "equipment_service_tags_get",
+    "operationId": "EquipmentServiceTags_Get",
+    "path": "/EquipmentServiceTags",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentServiceTags.ODataModel.EquipmentServiceTag"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentServiceTags"
+    ]
+  },
+  {
+    "name": "equipment_service_logs_get",
+    "operationId": "EquipmentServiceLogs_Get",
+    "path": "/EquipmentServiceLogs",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentServiceLogs.ODataModel.EquipmentServiceLog"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentServiceLogs"
+    ]
+  },
+  {
+    "name": "equipment_requested_services_get",
+    "operationId": "EquipmentRequestedServices_Get",
+    "path": "/EquipmentRequestedServices",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentRequestedServices.ODataModel.EquipmentRequestedService"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentRequestedServices"
+    ]
+  },
+  {
+    "name": "equipment_reading_logs_get",
+    "operationId": "EquipmentReadingLogs_Get",
+    "path": "/EquipmentReadingLogs",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentReadingLog.ODataModel.EquipmentReadingLog"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentReadingLogs"
+    ]
+  },
+  {
+    "name": "equipment_model_service_schedules_get",
+    "operationId": "EquipmentModelServiceSchedules_Get",
+    "path": "/EquipmentModelServiceSchedules",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentModelServiceSchedules.ODataModel.EquipmentModelServiceSchedule"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentModelServiceSchedules"
+    ]
+  },
+  {
+    "name": "equipment_models_get",
+    "operationId": "EquipmentModels_Get",
+    "path": "/EquipmentModels",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Equipment.ODataModel.EquipmentModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentModels"
+    ]
+  },
+  {
+    "name": "equipment_manufacturers_get",
+    "operationId": "EquipmentManufacturers_Get",
+    "path": "/EquipmentManufacturers",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Equipment.ODataModel.EquipmentManufacturer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentManufacturers"
+    ]
+  },
+  {
+    "name": "equipment_disposal_reasons_get",
+    "operationId": "EquipmentDisposalReasons_Get",
+    "path": "/EquipmentDisposalReasons",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentDisposalReasons.ODataModel.EquipmentDisposalReason"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentDisposalReasons"
+    ]
+  },
+  {
+    "name": "equipment_classes_get",
+    "operationId": "EquipmentClasses_Get",
+    "path": "/EquipmentClasses",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EquipmentClass.ODataModel.EquipmentClass"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EquipmentClasses"
+    ]
+  },
+  {
+    "name": "equipments_get",
+    "operationId": "Equipments_Get",
+    "path": "/Equipments",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Equipment.ODataModel.Equipment"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Equipments"
+    ]
+  },
+  {
+    "name": "employee_incidents_get",
+    "operationId": "EmployeeIncidents_Get",
+    "path": "/EmployeeIncidents",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EmployeeIncidents.ODataModel.EmployeeIncident"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EmployeeIncidents"
+    ]
+  },
+  {
+    "name": "employee_incident_types_get",
+    "operationId": "EmployeeIncidentTypes_Get",
+    "path": "/EmployeeIncidentTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.EmployeeIncidents.ODataModel.EmployeeIncidentType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "EmployeeIncidentTypes"
+    ]
+  },
+  {
+    "name": "division_integration_codes_get",
+    "operationId": "DivisionIntegrationCodes_Get",
+    "path": "/DivisionIntegrationCodes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.DivisionIntegrationCodes.ODataModel.DivisionIntegrationCode"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "DivisionIntegrationCodes"
+    ]
+  },
+  {
+    "name": "divisions_get",
+    "operationId": "Divisions_Get",
+    "path": "/Divisions",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Divisions.ODataModel.Division"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Divisions"
+    ]
+  },
+  {
+    "name": "localities_get",
+    "operationId": "Localities_Get",
+    "path": "/Localities",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.County.ODataModel.County"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Localities"
+    ]
+  },
+  {
+    "name": "contact_types_get",
+    "operationId": "ContactTypes_Get",
+    "path": "/ContactTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Contacts.ODataModel.ContactType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ContactTypes"
+    ]
+  },
+  {
+    "name": "contacts_get",
+    "operationId": "Contacts_Get",
+    "path": "/Contacts",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Contacts.ODataModel.Contact"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Contacts"
+    ]
+  },
+  {
+    "name": "contact_custom_fields_get",
+    "operationId": "ContactCustomFields_Get",
+    "path": "/ContactCustomFields",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TableExtender.ODataModel.ContactCustomField.TableExtenderDetail"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ContactCustomFields"
+    ]
+  },
+  {
+    "name": "contact_custom_field_definitions_get",
+    "operationId": "ContactCustomFieldDefinitions_Get",
+    "path": "/ContactCustomFieldDefinitions",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.TableExtender.ODataModel.Contact.TableExtenderHeader"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ContactCustomFieldDefinitions"
+    ]
+  },
+  {
+    "name": "companies_get",
+    "operationId": "Companies_Get",
+    "path": "/Companies",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Companies.ODataModel.Company"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Companies"
+    ]
+  },
+  {
+    "name": "clock_times_get",
+    "operationId": "ClockTimes_Get",
+    "path": "/ClockTimes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ClockTimes.ODataModel.ClockTime"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ClockTimes"
+    ]
+  },
+  {
+    "name": "certifications_get",
+    "operationId": "Certifications_Get",
+    "path": "/Certifications",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Certifications.ODataModel.Certification"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Certifications"
+    ]
+  },
+  {
+    "name": "certification_types_get",
+    "operationId": "CertificationTypes_Get",
+    "path": "/CertificationTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.CertificationTypes.ODataModel.CertificationType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "CertificationTypes"
+    ]
+  },
+  {
+    "name": "catalog_items_get",
+    "operationId": "CatalogItems_Get",
+    "path": "/CatalogItems",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.CatalogItems.ODataModel.CatalogItem"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "CatalogItems"
+    ]
+  },
+  {
+    "name": "catalog_item_categories_get",
+    "operationId": "CatalogItemCategories_Get",
+    "path": "/CatalogItemCategories",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.CatalogItemCategories.ODataModel.CatalogItemCategory"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "CatalogItemCategories"
+    ]
+  },
+  {
+    "name": "branches_get",
+    "operationId": "Branches_Get",
+    "path": "/Branches",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Branches.ODataModel.Branch"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Branches"
+    ]
+  },
+  {
+    "name": "bank_deposits_get",
+    "operationId": "BankDeposits_Get",
+    "path": "/BankDeposits",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.BankDeposits.ODataModel.BankDeposit"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "BankDeposits"
+    ]
+  },
+  {
+    "name": "authorization_authenticate_api_request",
+    "operationId": "Authorization_AuthenticateApiRequest",
+    "path": "/Authorization",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "authenticateRequest",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.Domain.Config.ExternalApiUsers.ApiAuthenticationRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AspireCloud.Domain.Config.ExternalApiUsers.ApiAuthenticationResult"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Authorization"
+    ]
+  },
+  {
+    "name": "authorization_refresh_token",
+    "operationId": "Authorization_RefreshToken",
+    "path": "/Authorization/RefreshToken",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "refreshTokenRequest",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.Domain.Config.ExternalApiUsers.ApiRefreshTokenRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AspireCloud.Domain.Config.ExternalApiUsers.ApiAuthenticationResult"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Authorization"
+    ]
+  },
+  {
+    "name": "attachments_get",
+    "operationId": "Attachments_Get",
+    "path": "/Attachments",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Attachments.ODataModel.Attachment"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Attachments"
+    ]
+  },
+  {
+    "name": "attachments_new_link",
+    "operationId": "Attachments_NewLink",
+    "path": "/Attachments/NewLink",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "link",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 1
+      },
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Attachments"
+    ]
+  },
+  {
+    "name": "attachments_get_attachment_file_data",
+    "operationId": "Attachments_GetAttachmentFileData",
+    "path": "/Attachments/AttachmentFileData",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.ExternalApi.Attachments.Models.AttachmentFileData"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Attachments"
+    ]
+  },
+  {
+    "name": "attachment_types_get",
+    "operationId": "AttachmentTypes_Get",
+    "path": "/AttachmentTypes",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 1
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.AttachmentTypes.AttachmentType"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "AttachmentTypes"
+    ]
+  },
+  {
+    "name": "addresses_get",
+    "operationId": "Addresses_Get",
+    "path": "/Addresses",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Addresses.ODataModel.Address"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Addresses"
+    ]
+  },
+  {
+    "name": "activity_contacts_get",
+    "operationId": "ActivityContacts_Get",
+    "path": "/ActivityContacts",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.ExternalApi.ActivityContacts.Model.ActivityContact"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ActivityContacts"
+    ]
+  },
+  {
+    "name": "activity_comment_histories_get",
+    "operationId": "ActivityCommentHistories_Get",
+    "path": "/ActivityCommentHistories",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Activities.ODataModel.ActivityCommentHistory"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ActivityCommentHistories"
+    ]
+  },
+  {
+    "name": "activity_categories_get",
+    "operationId": "ActivityCategories_Get",
+    "path": "/ActivityCategories",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.ActivityCategories.ODataModel.ActivityCategory"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "ActivityCategories"
+    ]
+  },
+  {
+    "name": "activities_get",
+    "operationId": "Activities_Get",
+    "path": "/Activities",
+    "method": "GET",
+    "parameters": [
+      {
+        "name": "$select",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$filter",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$expand",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$orderby",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$skip",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$top",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$pageNumber",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "$limit",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AspireCloud.Domain.Tenant.Activities.ODataModel.Activity"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Activities"
+    ]
+  },
+  {
+    "name": "issues_create",
+    "operationId": "Issues_Create",
+    "path": "/Issues",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.Activities.Models.IssueRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Issues"
+    ]
+  },
+  {
+    "name": "tasks_create",
+    "operationId": "Tasks_Create",
+    "path": "/Tasks",
+    "method": "POST",
+    "parameters": [
+      {
+        "name": "api-version",
+        "in": "header",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 2
+      },
+      {
+        "name": "api-version",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": true
+        },
+        "x-position": 3
+      }
+    ],
+    "requestBody": {
+      "x-name": "request",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/AspireCloud.ExternalApi.Activities.Models.TaskRequest"
+          }
+        }
+      },
+      "required": true,
+      "x-position": 1
+    },
+    "responses": {
+      "200": {
+        "description": "",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Tasks"
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "name": "opportunity_tags_delete",
+  "title": "Opportunity Tags Delete",
+  "description": "DELETE /OpportunityTags/{id}"
+}

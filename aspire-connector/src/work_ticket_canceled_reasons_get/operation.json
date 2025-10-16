@@ -1,0 +1,5 @@
+{
+  "name": "work_ticket_canceled_reasons_get",
+  "title": "Work Ticket Canceled Reasons Get",
+  "description": "GET /WorkTicketCanceledReasons"
+}

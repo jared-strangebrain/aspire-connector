@@ -1,0 +1,5 @@
+{
+  "name": "clock_times_get",
+  "title": "Clock Times Get",
+  "description": "GET /ClockTimes"
+}

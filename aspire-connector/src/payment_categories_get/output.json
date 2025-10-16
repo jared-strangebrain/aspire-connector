@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"PaymentCategoryID":{"type":"number"},"PaymentCategoryName":{"type":"string"},"Active":{"type":"boolean"},"SortOrder":{"type":"number"},"AccountNumber":{"type":"string"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

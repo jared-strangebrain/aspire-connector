@@ -1,0 +1,12 @@
+{
+    "name": "aspire",
+    "version": "1.0",
+    "title": "Aspire",
+    "description": "",
+    "service": {
+        "name": "json-placeholder",
+        "version": "1"
+    },
+    "tags": ["service"],
+    "isTrigger": false
+}

@@ -1,0 +1,223 @@
+CDK CLI Reference
+tray-cdk version
+USAGE
+  $ tray-cdk version [--json] [--verbose]
+
+FLAGS
+  --verbose  Show additional information about the CLI.
+
+GLOBAL FLAGS
+  --json  Format output as json.
+
+FLAG DESCRIPTIONS
+  --verbose  Show additional information about the CLI.
+
+    Additionally shows the architecture, node version, operating system, and versions of plugins that the CLI is using.
+tray-cdk help [COMMANDS]
+Display help for tray-cdk.
+
+USAGE
+  $ tray-cdk help [COMMANDS] [-n]
+
+ARGUMENTS
+  COMMANDS  Command to show help for.
+
+FLAGS
+  -n, --nested-commands  Include all nested commands in the output.
+
+DESCRIPTION
+  Display help for tray-cdk.
+tray-cdk autocomplete [SHELL]
+Display autocomplete installation instructions
+
+USAGE
+  $ tray-cdk autocomplete [SHELL] [-r]
+
+ARGUMENTS
+  SHELL  (zsh|bash|powershell) Shell type
+
+FLAGS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+DESCRIPTION
+  display autocomplete installation instructions
+
+EXAMPLES
+  $ tray-cdk autocomplete
+
+  $ tray-cdk autocomplete bash
+
+  $ tray-cdk autocomplete zsh
+
+  $ tray-cdk autocomplete powershell
+
+  $ tray-cdk autocomplete --refresh-cache
+tray-cdk namespace get ORGID
+Retrieves the connector namespace for your organization, if one exists
+
+USAGE
+  $ tray-cdk namespace get ORGID [--us] [--eu] [--ap]
+
+ARGUMENTS
+  ORGID  The ID of the organization you want to retrieve the namespace for
+
+FLAGS
+  --ap  Use the Tray APAC region
+  --eu  Use the Tray EU region
+  --us  Use the Tray US region
+
+DESCRIPTION
+  Retrieves the connector namespace for your organization, if one exists. ORGID is the UUID of your organisation, which can be found in the tray app URL eg. https://app.tray.io/workspaces/[UUID]
+
+EXAMPLES
+  $ tray-cdk namespace get some-org-id
+
+  $ tray-cdk namespace get some-org-id --us
+tray-cdk namespace create ORGID NAMESPACE
+Creates a new connector namespace for your organization
+
+USAGE
+  $ tray-cdk namespace create ORGID NAMESPACE [--us] [--eu] [--ap]
+
+ARGUMENTS
+  ORGID      The ID of the organization for which to create the namespace
+  NAMESPACE  The name of the namespace to create
+
+FLAGS
+  --ap  Use the Tray APAC region
+  --eu  Use the Tray EU region
+  --us  Use the Tray US region
+
+DESCRIPTION
+  Creates a new connector namespace for your organization. ORGID is the UUID of your organisation, which can be found in the tray app URL eg. https://app.tray.io/workspaces/[UUID]
+
+EXAMPLES
+  $ tray-cdk namespace create org-id namespace
+
+  $ tray-cdk namespace create org-id namespace --us
+tray-cdk connector init [CONNECTOR_NAME]
+Initialize a connector project
+
+USAGE
+  $ tray-cdk connector init [CONNECTOR_NAME] [-i]
+
+ARGUMENTS
+  CONNECTOR_NAME  Connector directory name to generate template files
+
+FLAGS
+  -i, --install  Runs `npm install` after successful generation
+
+DESCRIPTION
+  Initialize a connector project
+tray-cdk connector import [OPENAPI_SPEC] [CONNECTOR_NAME]
+Create a connector from an OpenAPI specification.
+
+USAGE
+  $ tray-cdk connector import [OPENAPI_SPEC] [CONNECTOR_NAME]
+
+ARGUMENTS
+  OPENAPI_SPEC    Location of the OpenAPI specification file
+  CONNECTOR_NAME  The name of the connector
+
+DESCRIPTION
+  Create a connector from an OpenAPI specification
+tray-cdk connector add-operation [OPERATION_NAME] [OPERATION_TYPE]
+Add an operation to connector project
+
+USAGE
+  $ tray-cdk connector add-operation [OPERATION_NAME] [OPERATION_TYPE]
+
+ARGUMENTS
+  OPERATION_NAME  Operation name
+  OPERATION_TYPE  (http|composite) Operation type
+
+DESCRIPTION
+  Add an operation to connector project
+tray-cdk connector test [OPERATION_NAME]
+Build and test connector project or an operation
+
+USAGE
+  $ tray-cdk connector test [OPERATION_NAME] [-v]
+
+ARGUMENTS
+  OPERATION_NAME  Operation name to run the test against
+
+FLAGS
+  -v, --verbose  Logs the input and output of an operation, requires operation name argument to be specified
+
+DESCRIPTION
+  Build and test connector project or an operation
+tray-cdk connector build
+Builds a connector project
+
+USAGE
+  $ tray-cdk connector build
+
+DESCRIPTION
+  Builds a connector project
+tray-cdk deployment create
+Creates a new deployment for a connector project
+
+USAGE
+  $ tray-cdk deployment create
+
+DESCRIPTION
+  Creates a new deployment for a connector project
+tray-cdk deployment get [CONNECTOR_NAME] [CONNECTOR_VERSION] [UUID]
+Retrieves the status of a connector deployment
+
+USAGE
+  $ tray-cdk deployment get CONNECTOR_NAME CONNECTOR_VERSION UUID
+
+ARGUMENTS
+  CONNECTOR_NAME     The name of the connector
+  CONNECTOR_VERSION  The version of the connector
+  UUID               The UUID of the deployment, this is included in the tray-cdk deploy output
+
+DESCRIPTION
+  Retrieves the status of a connector deployment
+tray-cdk permissions add [CONNECTOR_NAME] [CONNECTOR_VERSION]
+Share your connector version with other users in your organization.
+
+USAGE
+  $ tray-cdk permissions add [CONNECTOR_NAME] [CONNECTOR_VERSION] [-e <value>]
+
+ARGUMENTS
+  CONNECTOR_NAME     The name of the connector
+  CONNECTOR_VERSION  The version of the connector
+
+FLAGS
+  -e, --email=<value>  Share with users by providing a list of emails
+
+DESCRIPTION
+  Share your connector version with other users in your organization
+
+EXAMPLES
+  $ tray-cdk permissions add
+
+  $ tray-cdk permissions add my-connector
+
+  $ tray-cdk permissions add my-connector 1.0
+
+  $ tray-cdk permissions add my-connector 1.0 --email="my.email@domain.com, your.email@domain.com"
+
+  $ tray-cdk permissions add my-connector 1.0 -e="my.email@domain.com, your.email@domain.com"
+tray-cdk permissions list [CONNECTOR_NAME] [CONNECTOR_VERSION]
+Retrieves a list of emails that have access to a connector
+
+USAGE
+  $ tray-cdk permissions list [CONNECTOR_NAME] [CONNECTOR_VERSION]
+
+ARGUMENTS
+  CONNECTOR_NAME     The name of the connector
+  CONNECTOR_VERSION  The version of the connector
+
+DESCRIPTION
+  Retrieves a list of emails that have access to a connector
+
+EXAMPLES
+  $ tray-cdk permissions list
+
+  $ tray-cdk permissions list my-connector
+
+  $ tray-cdk permissions list my-connector 1.0

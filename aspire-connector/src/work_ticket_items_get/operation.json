@@ -1,0 +1,5 @@
+{
+  "name": "work_ticket_items_get",
+  "title": "Work Ticket Items Get",
+  "description": "GET /WorkTicketItems"
+}

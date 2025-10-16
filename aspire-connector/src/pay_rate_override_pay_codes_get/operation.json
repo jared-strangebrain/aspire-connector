@@ -1,0 +1,5 @@
+{
+  "name": "pay_rate_override_pay_codes_get",
+  "title": "Pay Rate Override Pay Codes Get",
+  "description": "GET /PayRateOverridePayCodes"
+}
