@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { ItemAllocationsGetInput } from './input';
 import { ItemAllocationsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const item_allocations_getHandler = OperationHandlerSetup.configureHandle
   ItemAllocationsGetInput,
   ItemAllocationsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/ItemAllocations')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const item_allocations_getHandler = OperationHandlerSetup.configureHandle
       )
   )
 );
+

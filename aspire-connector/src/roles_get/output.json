@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-07/schema#"}
+{"type":"array","items":{"type":"object","properties":{"RoleID":{"type":"number"},"RoleName":{"type":"string"},"Required":{"type":"boolean"},"RoleValue":{"type":"number"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

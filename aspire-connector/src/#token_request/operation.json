@@ -1,0 +1,7 @@
+{
+  "name": "#token_request",
+  "title": "Aspire Authentication",
+  "description": "Token-based authentication for Aspire API. Obtains a Bearer token (valid 24 hours) using Client ID, Client Secret, and environment selection. See: https://guide.youraspire.com/apidocs/authentication-authorization-1",
+  "type": "private"
+}
+

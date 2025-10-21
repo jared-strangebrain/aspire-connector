@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { TakeoffGroupsGetInput } from './input';
 import { TakeoffGroupsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const takeoff_groups_getHandler = OperationHandlerSetup.configureHandler<
   TakeoffGroupsGetInput,
   TakeoffGroupsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/TakeoffGroups')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const takeoff_groups_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

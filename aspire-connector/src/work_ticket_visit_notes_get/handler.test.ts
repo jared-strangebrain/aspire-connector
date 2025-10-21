@@ -1,4 +1,4 @@
-import { OperationHandlerTestSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerTestSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerTest';
 import { work_ticket_visit_notes_getHandler } from './handler';
 
 /**

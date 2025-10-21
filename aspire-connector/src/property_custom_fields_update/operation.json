@@ -1,0 +1,5 @@
+{
+  "name": "property_custom_fields_update",
+  "title": "PropertyCustomFields Update",
+  "description": "PUT /PropertyCustomFields"
+}

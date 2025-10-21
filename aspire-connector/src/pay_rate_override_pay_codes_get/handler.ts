@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { PayRateOverridePayCodesGetInput } from './input';
 import { PayRateOverridePayCodesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const pay_rate_override_pay_codes_getHandler = OperationHandlerSetup.conf
   PayRateOverridePayCodesGetInput,
   PayRateOverridePayCodesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/PayRateOverridePayCodes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const pay_rate_override_pay_codes_getHandler = OperationHandlerSetup.conf
       )
   )
 );
+

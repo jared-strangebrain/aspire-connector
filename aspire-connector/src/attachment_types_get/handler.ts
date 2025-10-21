@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { AttachmentTypesGetInput } from './input';
 import { AttachmentTypesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const attachment_types_getHandler = OperationHandlerSetup.configureHandle
   AttachmentTypesGetInput,
   AttachmentTypesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/AttachmentTypes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -22,3 +23,4 @@ export const attachment_types_getHandler = OperationHandlerSetup.configureHandle
       )
   )
 );
+

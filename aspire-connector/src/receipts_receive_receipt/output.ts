@@ -1,1 +1,1 @@
-export type ReceiptsReceiveReceiptOutput = void;
+export type ReceiptsReceiveReceiptOutput = { success: boolean; };

@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { CatalogItemCategoriesGetInput } from './input';
 import { CatalogItemCategoriesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const catalog_item_categories_getHandler = OperationHandlerSetup.configur
   CatalogItemCategoriesGetInput,
   CatalogItemCategoriesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/CatalogItemCategories')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const catalog_item_categories_getHandler = OperationHandlerSetup.configur
       )
   )
 );
+

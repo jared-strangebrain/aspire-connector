@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { PropertyCustomFieldsGetInput } from './input';
 import { PropertyCustomFieldsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const property_custom_fields_getHandler = OperationHandlerSetup.configure
   PropertyCustomFieldsGetInput,
   PropertyCustomFieldsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/PropertyCustomFields')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const property_custom_fields_getHandler = OperationHandlerSetup.configure
       )
   )
 );
+

@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { WorkTicketTimesGetInput } from './input';
 import { WorkTicketTimesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const work_ticket_times_getHandler = OperationHandlerSetup.configureHandl
   WorkTicketTimesGetInput,
   WorkTicketTimesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/WorkTicketTimes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const work_ticket_times_getHandler = OperationHandlerSetup.configureHandl
       )
   )
 );
+

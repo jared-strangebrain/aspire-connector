@@ -1,0 +1,5 @@
+{
+  "name": "opportunities_create",
+  "title": "Opportunities Create",
+  "description": "POST /Opportunities"
+}

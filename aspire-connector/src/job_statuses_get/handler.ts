@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { JobStatusesGetInput } from './input';
 import { JobStatusesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const job_statuses_getHandler = OperationHandlerSetup.configureHandler<
   JobStatusesGetInput,
   JobStatusesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/JobStatuses')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const job_statuses_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

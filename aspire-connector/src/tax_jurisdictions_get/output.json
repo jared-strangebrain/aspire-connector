@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-07/schema#"}
+{"type":"array","items":{"type":"object","properties":{"TaxJurisdictionID":{"type":"number"},"TaxJurisdictionName":{"type":"string"},"StateTaxPercent":{"type":"number"},"FederalTaxPercent":{"type":"number"},"Active":{"type":"boolean"},"TaxEntityJurisdictions":{"type":"array","items":{}}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

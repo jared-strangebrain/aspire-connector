@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { VersionGetApiVersionInput } from './input';
 import { VersionGetApiVersionOutput } from './output';
 
@@ -8,7 +9,7 @@ export const version_get_api_versionHandler = OperationHandlerSetup.configureHan
   VersionGetApiVersionInput,
   VersionGetApiVersionOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/Version/GetApiVersion')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -22,3 +23,4 @@ export const version_get_api_versionHandler = OperationHandlerSetup.configureHan
       )
   )
 );
+

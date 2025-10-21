@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { PaymentTermsGetInput } from './input';
 import { PaymentTermsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const payment_terms_getHandler = OperationHandlerSetup.configureHandler<
   PaymentTermsGetInput,
   PaymentTermsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/PaymentTerms')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const payment_terms_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

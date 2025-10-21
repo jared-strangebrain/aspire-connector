@@ -1,0 +1,5 @@
+{
+  "name": "pay_rate_override_pay_codes_update",
+  "title": "PayRateOverridePayCodes Update",
+  "description": "PUT /PayRateOverridePayCodes"
+}

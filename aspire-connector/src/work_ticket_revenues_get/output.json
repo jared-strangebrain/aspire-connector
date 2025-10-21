@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-07/schema#"}
+{"type":"array","items":{"type":"object","properties":{"WorkTicketRevenueID":{"type":"number"},"WorkTicketID":{"type":"number"},"WorkTicketNumber":{"type":"number"},"RevenueMonth":{"type":"string"},"RevenueAmount":{"type":"number"},"CreatedDateTime":{"type":"string"},"EditedByUserID":{"type":"number"},"EditedByUserName":{"type":"string"},"EditedDateTime":{"type":"string"},"AccountingPeriodID":{"type":"number"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

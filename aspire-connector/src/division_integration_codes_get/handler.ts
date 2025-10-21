@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { DivisionIntegrationCodesGetInput } from './input';
 import { DivisionIntegrationCodesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const division_integration_codes_getHandler = OperationHandlerSetup.confi
   DivisionIntegrationCodesGetInput,
   DivisionIntegrationCodesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/DivisionIntegrationCodes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const division_integration_codes_getHandler = OperationHandlerSetup.confi
       )
   )
 );
+

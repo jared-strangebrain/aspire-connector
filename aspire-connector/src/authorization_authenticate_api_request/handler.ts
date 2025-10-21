@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { AuthorizationAuthenticateApiRequestInput } from './input';
 import { AuthorizationAuthenticateApiRequestOutput } from './output';
 
@@ -8,7 +9,7 @@ export const authorization_authenticate_api_requestHandler = OperationHandlerSet
   AuthorizationAuthenticateApiRequestInput,
   AuthorizationAuthenticateApiRequestOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.post('/Authorization')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -22,3 +23,4 @@ export const authorization_authenticate_api_requestHandler = OperationHandlerSet
       )
   )
 );
+

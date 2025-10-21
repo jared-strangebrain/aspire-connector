@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { AttachmentsNewLinkInput } from './input';
 import { AttachmentsNewLinkOutput } from './output';
 
@@ -8,7 +9,7 @@ export const attachments_new_linkHandler = OperationHandlerSetup.configureHandle
   AttachmentsNewLinkInput,
   AttachmentsNewLinkOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/Attachments/NewLink')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -25,3 +26,4 @@ export const attachments_new_linkHandler = OperationHandlerSetup.configureHandle
       )
   )
 );
+

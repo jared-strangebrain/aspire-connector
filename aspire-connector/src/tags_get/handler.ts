@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { TagsGetInput } from './input';
 import { TagsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const tags_getHandler = OperationHandlerSetup.configureHandler<
   TagsGetInput,
   TagsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/Tags')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const tags_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { IssuesCreateInput } from './input';
 import { IssuesCreateOutput } from './output';
 
@@ -8,7 +9,7 @@ export const issues_createHandler = OperationHandlerSetup.configureHandler<
   IssuesCreateInput,
   IssuesCreateOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.post('/Issues')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -22,3 +23,4 @@ export const issues_createHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

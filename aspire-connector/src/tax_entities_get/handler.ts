@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { TaxEntitiesGetInput } from './input';
 import { TaxEntitiesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const tax_entities_getHandler = OperationHandlerSetup.configureHandler<
   TaxEntitiesGetInput,
   TaxEntitiesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/TaxEntities')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const tax_entities_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

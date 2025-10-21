@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-07/schema#"}
+{"type":"array","items":{"type":"object","properties":{"TakeoffItemID":{"type":"number"},"TakeoffGroupID":{"type":"number"},"TakeoffGroupName":{"type":"string"},"UnitTypeID":{"type":"number"},"UnitTypeName":{"type":"string"},"TakeoffItemName":{"type":"string"},"Active":{"type":"boolean"},"PrimaryTakeoff":{"type":"boolean"},"SortOrder":{"type":"number"},"TableExtenderHeaderID":{"type":"number"},"ShowInLists":{"type":"boolean"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

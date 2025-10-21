@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { ActivityCommentHistoriesGetInput } from './input';
 import { ActivityCommentHistoriesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const activity_comment_histories_getHandler = OperationHandlerSetup.confi
   ActivityCommentHistoriesGetInput,
   ActivityCommentHistoriesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/ActivityCommentHistories')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const activity_comment_histories_getHandler = OperationHandlerSetup.confi
       )
   )
 );
+

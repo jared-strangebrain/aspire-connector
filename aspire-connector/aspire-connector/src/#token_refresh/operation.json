@@ -1,0 +1,6 @@
+{
+  "key": "#token_refresh",
+  "name": "Refresh Access Token",
+  "description": "Automatically refresh the access token using the refresh token",
+  "operation_type": "TOKEN_REFRESH"
+}

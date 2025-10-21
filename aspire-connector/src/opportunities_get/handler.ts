@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { OpportunitiesGetInput } from './input';
 import { OpportunitiesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const opportunities_getHandler = OperationHandlerSetup.configureHandler<
   OpportunitiesGetInput,
   OpportunitiesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/Opportunities')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const opportunities_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

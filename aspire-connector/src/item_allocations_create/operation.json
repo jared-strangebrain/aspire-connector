@@ -1,0 +1,5 @@
+{
+  "name": "item_allocations_create",
+  "title": "ItemAllocations Create",
+  "description": "POST /ItemAllocations"
+}

@@ -1,1 +1,1 @@
-export type ServiceTaxOverridesPostOutput = void;
+export type ServiceTaxOverridesPostOutput = { success: boolean; };

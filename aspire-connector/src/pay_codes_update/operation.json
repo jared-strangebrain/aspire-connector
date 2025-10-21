@@ -1,0 +1,5 @@
+{
+  "name": "pay_codes_update",
+  "title": "PayCodes Update",
+  "description": "PUT /PayCodes"
+}

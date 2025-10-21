@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { WorkTicketCanceledReasonsGetInput } from './input';
 import { WorkTicketCanceledReasonsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const work_ticket_canceled_reasons_getHandler = OperationHandlerSetup.con
   WorkTicketCanceledReasonsGetInput,
   WorkTicketCanceledReasonsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/WorkTicketCanceledReasons')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const work_ticket_canceled_reasons_getHandler = OperationHandlerSetup.con
       )
   )
 );
+

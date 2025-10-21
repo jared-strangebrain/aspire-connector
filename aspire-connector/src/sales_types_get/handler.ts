@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { SalesTypesGetInput } from './input';
 import { SalesTypesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const sales_types_getHandler = OperationHandlerSetup.configureHandler<
   SalesTypesGetInput,
   SalesTypesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/SalesTypes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const sales_types_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

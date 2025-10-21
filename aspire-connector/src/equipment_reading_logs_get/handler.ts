@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { EquipmentReadingLogsGetInput } from './input';
 import { EquipmentReadingLogsGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const equipment_reading_logs_getHandler = OperationHandlerSetup.configure
   EquipmentReadingLogsGetInput,
   EquipmentReadingLogsGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/EquipmentReadingLogs')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const equipment_reading_logs_getHandler = OperationHandlerSetup.configure
       )
   )
 );
+

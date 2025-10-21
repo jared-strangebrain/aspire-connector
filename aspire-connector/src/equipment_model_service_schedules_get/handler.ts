@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { EquipmentModelServiceSchedulesGetInput } from './input';
 import { EquipmentModelServiceSchedulesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const equipment_model_service_schedules_getHandler = OperationHandlerSetu
   EquipmentModelServiceSchedulesGetInput,
   EquipmentModelServiceSchedulesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/EquipmentModelServiceSchedules')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const equipment_model_service_schedules_getHandler = OperationHandlerSetu
       )
   )
 );
+

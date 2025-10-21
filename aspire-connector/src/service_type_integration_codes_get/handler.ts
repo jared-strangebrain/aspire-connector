@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { ServiceTypeIntegrationCodesGetInput } from './input';
 import { ServiceTypeIntegrationCodesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const service_type_integration_codes_getHandler = OperationHandlerSetup.c
   ServiceTypeIntegrationCodesGetInput,
   ServiceTypeIntegrationCodesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/ServiceTypeIntegrationCodes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const service_type_integration_codes_getHandler = OperationHandlerSetup.c
       )
   )
 );
+

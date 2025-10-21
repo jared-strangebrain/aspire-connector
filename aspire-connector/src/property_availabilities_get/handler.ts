@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { PropertyAvailabilitiesGetInput } from './input';
 import { PropertyAvailabilitiesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const property_availabilities_getHandler = OperationHandlerSetup.configur
   PropertyAvailabilitiesGetInput,
   PropertyAvailabilitiesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/PropertyAvailabilities')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const property_availabilities_getHandler = OperationHandlerSetup.configur
       )
   )
 );
+

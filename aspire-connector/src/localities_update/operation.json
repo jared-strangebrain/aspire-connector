@@ -1,0 +1,5 @@
+{
+  "name": "localities_update",
+  "title": "Localities Update",
+  "description": "PUT /Localities"
+}

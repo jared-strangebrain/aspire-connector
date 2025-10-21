@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-07/schema#"}
+{"type":"array","items":{"type":"object","properties":{"ReceiptStatusID":{"type":"number"},"ReceiptStatus":{"type":"string"},"ReceiptStatusName":{"type":"string"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

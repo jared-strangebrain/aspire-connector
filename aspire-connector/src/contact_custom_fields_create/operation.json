@@ -1,0 +1,5 @@
+{
+  "name": "contact_custom_fields_create",
+  "title": "ContactCustomFields Create",
+  "description": "POST /ContactCustomFields"
+}

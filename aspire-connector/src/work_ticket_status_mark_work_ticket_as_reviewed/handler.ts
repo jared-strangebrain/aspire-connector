@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { WorkTicketStatusMarkWorkTicketAsReviewedInput } from './input';
 import { WorkTicketStatusMarkWorkTicketAsReviewedOutput } from './output';
 
@@ -8,7 +9,7 @@ export const work_ticket_status_mark_work_ticket_as_reviewedHandler = OperationH
   WorkTicketStatusMarkWorkTicketAsReviewedInput,
   WorkTicketStatusMarkWorkTicketAsReviewedOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.post('/WorkTicketStatus/MarkWorkTicketAsReviewed')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -22,3 +23,4 @@ export const work_ticket_status_mark_work_ticket_as_reviewedHandler = OperationH
       )
   )
 );
+

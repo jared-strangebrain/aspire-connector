@@ -1,0 +1,5 @@
+{
+  "name": "localities_create",
+  "title": "Localities Create",
+  "description": "POST /Localities"
+}

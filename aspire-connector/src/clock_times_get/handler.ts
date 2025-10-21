@@ -1,5 +1,6 @@
-import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
+import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
+import { globalConfigHttp } from '../GlobalConfig';
 import { ClockTimesGetInput } from './input';
 import { ClockTimesGetOutput } from './output';
 
@@ -8,7 +9,7 @@ export const clock_times_getHandler = OperationHandlerSetup.configureHandler<
   ClockTimesGetInput,
   ClockTimesGetOutput
 >((handler) =>
-  handler.usingHttp((http) =>
+  handler.withGlobalConfiguration(globalConfigHttp).usingHttp((http) =>
     http.get('/ClockTimes')
       .handleRequest((ctx, input, request) => {
         let req = request;
@@ -46,3 +47,4 @@ export const clock_times_getHandler = OperationHandlerSetup.configureHandler<
       )
   )
 );
+

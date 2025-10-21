@@ -1,1 +1,1 @@
-export type WorkTicketsCreateAsNeededWorkTicketsOutput = void;
+export type WorkTicketsCreateAsNeededWorkTicketsOutput = { success: boolean; };

@@ -1,1 +1,1 @@
-{"$schema":"http://json-schema.org/draft-07/schema#"}
+{"type":"array","items":{"type":"object","properties":{"WorkersCompID":{"type":"number"},"WorkersCompName":{"type":"string"},"WorkersCompCode":{"type":"string"},"CreatedDateTime":{"type":"string"},"CreatedByUserName":{"type":"string"},"ModifiedDateTime":{"type":"string"},"ModifiedByUserName":{"type":"string"},"CreatedByUserID":{"type":"number"},"ModifiedByUserID":{"type":"number"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

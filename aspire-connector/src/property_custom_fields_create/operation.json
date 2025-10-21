@@ -1,0 +1,5 @@
+{
+  "name": "property_custom_fields_create",
+  "title": "PropertyCustomFields Create",
+  "description": "POST /PropertyCustomFields"
+}
