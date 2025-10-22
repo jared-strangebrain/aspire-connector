@@ -1,0 +1,5 @@
+{
+  "name": "activity_categories_get",
+  "title": "Activity Categories Get",
+  "description": "GET /ActivityCategories"
+}

@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"AttachmentTypeID":{"type":"number"},"AttachmentTypeName":{"type":"string"},"Required":{"type":"boolean"},"Active":{"type":"boolean"},"AspireSystemId":{"type":"number"},"CanDelete":{"type":"boolean"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

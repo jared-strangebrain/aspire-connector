@@ -1,0 +1,45 @@
+export interface Invoice {
+  InvoiceID?: number;
+  InvoiceBatchID?: number;
+  InvoiceBatchNumber?: number;
+  InvoiceAccountingPeriod?: string;
+  BranchID?: number;
+  BranchName?: string;
+  BranchCode?: string;
+  PropertyID?: number;
+  PropertyName?: string;
+  PrimaryContactID?: number;
+  PrimaryContactName?: string;
+  BillingContactID?: number;
+  BillingContactName?: string;
+  InvoiceDate?: string;
+  Amount?: number;
+  InvoiceAddressID?: number;
+  AddressLine1?: string;
+  AddressLine2?: string;
+  City?: string;
+  StateProvinceCode?: string;
+  ZipCode?: string;
+  AmountRemaining?: number;
+  OrigAmount?: number;
+  PaymentTermsID?: number;
+  PaymentTermsName?: string;
+  InvoiceNote?: string;
+  EmailStatus?: string;
+  DueDate?: string;
+  ReportLayoutID?: number;
+  ReportLayoutName?: string;
+  CompanyID?: number;
+  CompanyName?: string;
+  TaxJurisdictionID?: number;
+  TaxJurisdictionName?: string;
+  InvoiceNumberPrefix?: string;
+  LastModifiedDateTime?: string;
+  LastModifiedByUserID?: number;
+  LastModifiedByUserName?: string;
+  CompletedDateTime?: string;
+  InvoiceOpportunities?: any[];
+  InvoiceNumber?: number;
+}
+
+export type InvoicesGetOutput = Invoice[];

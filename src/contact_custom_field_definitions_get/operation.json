@@ -1,0 +1,5 @@
+{
+  "name": "contact_custom_field_definitions_get",
+  "title": "Contact Custom Field Definitions Get",
+  "description": "GET /ContactCustomFieldDefinitions"
+}

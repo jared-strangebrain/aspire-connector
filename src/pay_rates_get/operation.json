@@ -1,0 +1,5 @@
+{
+  "name": "pay_rates_get",
+  "title": "Pay Rates Get",
+  "description": "GET /PayRates"
+}

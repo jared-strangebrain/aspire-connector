@@ -1,0 +1,5 @@
+{
+  "name": "tax_jurisdictions_update",
+  "title": "TaxJurisdictions Update",
+  "description": "PUT /TaxJurisdictions"
+}

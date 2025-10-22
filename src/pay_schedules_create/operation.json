@@ -1,0 +1,5 @@
+{
+  "name": "pay_schedules_create",
+  "title": "PaySchedules Create",
+  "description": "POST /PaySchedules"
+}

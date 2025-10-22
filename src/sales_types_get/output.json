@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"SalesTypeID":{"type":"number"},"SalesTypeName":{"type":"string"},"Active":{"type":"boolean"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

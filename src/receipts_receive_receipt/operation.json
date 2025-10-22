@@ -1,0 +1,5 @@
+{
+  "name": "receipts_receive_receipt",
+  "title": "Receipts Receive Receipt",
+  "description": "POST /Receipts/Receive"
+}

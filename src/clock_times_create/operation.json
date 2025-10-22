@@ -1,0 +1,5 @@
+{
+  "name": "clock_times_create",
+  "title": "ClockTimes Create",
+  "description": "POST /ClockTimes"
+}

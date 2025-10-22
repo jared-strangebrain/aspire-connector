@@ -1,0 +1,1 @@
+{"type":"object","properties":{"access_token":{"type":"string"},"refresh_token":{"type":"string"},"token_type":{"type":"string"},"expires_in":{"type":"number"}},"additionalProperties":false,"required":["access_token","expires_in","token_type"],"$schema":"http://json-schema.org/draft-07/schema#","advanced":[]}

@@ -1,0 +1,5 @@
+{
+  "name": "catalog_items_update",
+  "title": "CatalogItems Update",
+  "description": "PUT /CatalogItems"
+}

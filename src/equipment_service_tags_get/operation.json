@@ -1,0 +1,5 @@
+{
+  "name": "equipment_service_tags_get",
+  "title": "Equipment Service Tags Get",
+  "description": "GET /EquipmentServiceTags"
+}

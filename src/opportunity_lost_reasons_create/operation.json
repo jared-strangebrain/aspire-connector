@@ -1,0 +1,5 @@
+{
+  "name": "opportunity_lost_reasons_create",
+  "title": "OpportunityLostReasons Create",
+  "description": "POST /OpportunityLostReasons"
+}

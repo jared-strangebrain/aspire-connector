@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"OpportunityTagID":{"type":"number"},"OpportunityID":{"type":"number"},"OpportunityName":{"type":"string"},"TagID":{"type":"number"},"TagName":{"type":"string"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"ProspectRatingID":{"type":"number"},"ProspectRatingName":{"type":"string"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

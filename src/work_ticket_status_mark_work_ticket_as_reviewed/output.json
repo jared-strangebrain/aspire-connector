@@ -1,0 +1,1 @@
+{"type":"object","properties":{"success":{"type":"boolean"}},"additionalProperties":false,"required":["success"],"$schema":"http://json-schema.org/draft-07/schema#","advanced":[]}

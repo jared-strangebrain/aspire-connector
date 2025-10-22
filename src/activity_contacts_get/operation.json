@@ -1,0 +1,5 @@
+{
+  "name": "activity_contacts_get",
+  "title": "Activity Contacts Get",
+  "description": "GET /ActivityContacts"
+}

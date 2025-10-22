@@ -1,0 +1,5 @@
+{
+  "name": "property_contacts_update",
+  "title": "PropertyContacts Update",
+  "description": "PUT /PropertyContacts"
+}

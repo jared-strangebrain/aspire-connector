@@ -1,0 +1,5 @@
+{
+  "name": "opportunity_services_get",
+  "title": "Opportunity Services Get",
+  "description": "GET /OpportunityServices"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "unit_types_create",
+  "title": "UnitTypes Create",
+  "description": "POST /UnitTypes"
+}

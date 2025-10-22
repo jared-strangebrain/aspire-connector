@@ -1,0 +1,5 @@
+{
+  "name": "activity_comment_histories_get",
+  "title": "Activity Comment Histories Get",
+  "description": "GET /ActivityCommentHistories"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "attachments_get_attachment_file_data",
+  "title": "Attachments Get Attachment File Data",
+  "description": "GET /Attachments/AttachmentFileData"
+}

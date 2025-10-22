@@ -1,0 +1,5 @@
+{
+  "name": "property_custom_field_definitions_get",
+  "title": "Property Custom Field Definitions Get",
+  "description": "GET /PropertyCustomFieldDefinitions"
+}

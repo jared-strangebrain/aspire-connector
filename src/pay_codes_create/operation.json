@@ -1,0 +1,5 @@
+{
+  "name": "pay_codes_create",
+  "title": "PayCodes Create",
+  "description": "POST /PayCodes"
+}

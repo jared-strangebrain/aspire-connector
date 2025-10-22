@@ -1,0 +1,40 @@
+export interface Payment {
+  PaymentID?: number;
+  CompanyID?: number;
+  CompanyName?: string;
+  ContactID?: number;
+  ContactName?: string;
+  BranchID?: number;
+  BranchName?: string;
+  BankDepositID?: number;
+  PaymentType?: string;
+  PaymentReference?: string;
+  PaymentAmount?: number;
+  PaymentDate?: string;
+  CreatedDateTime?: string;
+  CreatedByUserID?: number;
+  CreatedByUserName?: string;
+  PaymentNote?: string;
+  PaymentCategoryID?: number;
+  PaymentCategoryName?: string;
+  CreditMemoNumber?: number;
+  PropertyID?: number;
+  OpportunityID?: number;
+  DivisionID?: number;
+  DivisionName?: string;
+  SaleAmount?: number;
+  TaxJurisdictionID?: number;
+  TaxJurisdictionName?: string;
+  TaxAmount?: number;
+  TaxableAmount?: number;
+  LastModifiedByUserID?: number;
+  LastModifiedByUserName?: string;
+  LastModifiedDateTime?: string;
+  ElectronicPaymentID?: number;
+  BillingAddressID?: number;
+  EmailStatus?: string;
+  IsExpense?: boolean;
+  PaymentAllocations?: any[];
+}
+
+export type PaymentsGetOutput = Payment[];

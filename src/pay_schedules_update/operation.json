@@ -1,0 +1,5 @@
+{
+  "name": "pay_schedules_update",
+  "title": "PaySchedules Update",
+  "description": "PUT /PaySchedules"
+}

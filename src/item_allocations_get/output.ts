@@ -1,0 +1,48 @@
+export interface ItemAllocation {
+  ItemAllocationID?: number;
+  ReceiptItemID?: number;
+  ReceiptID?: number;
+  WorkTicketID?: number;
+  WorkTicketNumber?: number;
+  InventoryLocationID?: number;
+  InventoryLocationName?: string;
+  DeviceID?: number;
+  DeviceName?: string;
+  CatalogItemID?: number;
+  CatalogItemName?: string;
+  ItemName?: string;
+  ItemType?: string;
+  ItemQuantity?: number;
+  ItemUnitCost?: number;
+  ItemTotalCost?: number;
+  CreatedDateTime?: string;
+  CreatedByUserID?: number;
+  CreatedByUserName?: string;
+  AcceptedDateTime?: string;
+  AcceptedUserID?: number;
+  AcceptedUserName?: string;
+  AllocationStatus?: string;
+  ItemAllocationDate?: string;
+  LastModifiedByUserID?: number;
+  LastModifiedByUserName?: string;
+  LastModifiedDateTime?: string;
+  TransactionID?: number;
+  InventoryAdjustment?: boolean;
+  InvoiceID?: number;
+  JobInventoryItemAllocationID?: number;
+  FromWorkTicketIDToInventory?: number;
+  PreReceivedItemQuantity?: number;
+  SubcontractorAcceptedUserID?: number;
+  SubcontractorAcceptedDateTime?: string;
+  SubcontractorCreated?: boolean;
+  SubcontractorRouteID?: number;
+  SubcontractorServicesRenderedDate?: string;
+  WorkTicketTimeID?: number;
+  EPAName?: string;
+  EPANumber?: string;
+  VendorInvoiceNumber?: string;
+  BranchID?: number;
+  AccountingPeriodYear?: string;
+}
+
+export type ItemAllocationsGetOutput = ItemAllocation[];

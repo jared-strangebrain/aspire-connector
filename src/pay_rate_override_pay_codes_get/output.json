@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"PayRateOverridePayCodeID":{"type":"number"},"PayRateID":{"type":"number"},"PayCodeID":{"type":"number"},"OverrideRate":{"type":"number"},"ContactID":{"type":"number"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

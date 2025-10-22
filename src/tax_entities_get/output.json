@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"TaxEntityID":{"type":"number"},"TaxEntityName":{"type":"string"},"TaxPercent":{"type":"number"},"Active":{"type":"boolean"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

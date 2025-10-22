@@ -1,0 +1,46 @@
+export interface Receipt {
+  ReceiptID?: number;
+  BranchID?: number;
+  BranchName?: string;
+  BranchCode?: string;
+  ReceiptNumberPrefix?: string;
+  PurchaseNumberWithBranchPrefix?: string;
+  VendorID?: number;
+  AccountingVendorID?: string;
+  ReceiptNumber?: number;
+  VendorInvoiceNum?: string;
+  VendorInvoiceDate?: string;
+  ReceiptStatusID?: number;
+  ReceiptStatusName?: string;
+  WorkTicketID?: number;
+  WorkTicketNumber?: number;
+  CreatedDateTime?: string;
+  CreatedByUserID?: number;
+  CreatedByUserName?: string;
+  LastModifiedDateTime?: string;
+  LastModifiedByUserID?: number;
+  LastModifiedByUserName?: string;
+  ReceivedDate?: string;
+  ReceivedUserID?: number;
+  ReceivedByUserName?: string;
+  ApprovedDate?: string;
+  ApprovedUserID?: number;
+  ApprovedByUserName?: string;
+  ReceiptNote?: string;
+  ReceiptTotalCost?: number;
+  SyncDate?: string;
+  SyncError?: string;
+  PurchaseAddressLocationName?: string;
+  ShippedToAddressID?: number;
+  IsPurchaseCredit?: boolean;
+  MasterReceiptID?: number;
+  RevisionNumber?: number;
+  JobInventory?: boolean;
+  InventoryLocationID?: number;
+  OpportunityID?: number;
+  OpportunityNumber?: number;
+  ReceiptItems?: any[];
+  ReceiptExtraCosts?: any[];
+}
+
+export type ReceiptsGetOutput = Receipt[];

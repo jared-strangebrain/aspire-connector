@@ -1,0 +1,5 @@
+{
+  "name": "receipts_approve_receipt",
+  "title": "Receipts Approve Receipt",
+  "description": "POST /Receipts/Approve"
+}

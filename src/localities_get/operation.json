@@ -1,0 +1,5 @@
+{
+  "name": "localities_get",
+  "title": "Localities Get",
+  "description": "GET /Localities"
+}

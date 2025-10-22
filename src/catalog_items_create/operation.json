@@ -1,0 +1,5 @@
+{
+  "name": "catalog_items_create",
+  "title": "CatalogItems Create",
+  "description": "POST /CatalogItems"
+}

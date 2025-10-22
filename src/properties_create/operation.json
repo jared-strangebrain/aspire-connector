@@ -1,0 +1,5 @@
+{
+  "name": "properties_create",
+  "title": "Properties Create",
+  "description": "POST /Properties"
+}

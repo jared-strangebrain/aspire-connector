@@ -1,0 +1,5 @@
+{
+  "name": "property_availabilities_get",
+  "title": "Property Availabilities Get",
+  "description": "GET /PropertyAvailabilities"
+}

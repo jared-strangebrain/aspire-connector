@@ -1,0 +1,5 @@
+{
+  "name": "equipment_reading_logs_update",
+  "title": "EquipmentReadingLogs Update",
+  "description": "PUT /EquipmentReadingLogs"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "contact_types_get",
+  "title": "Contact Types Get",
+  "description": "GET /ContactTypes"
+}

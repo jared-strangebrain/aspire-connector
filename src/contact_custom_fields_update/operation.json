@@ -1,0 +1,5 @@
+{
+  "name": "contact_custom_fields_update",
+  "title": "ContactCustomFields Update",
+  "description": "PUT /ContactCustomFields"
+}

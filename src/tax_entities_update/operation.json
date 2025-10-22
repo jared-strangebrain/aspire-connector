@@ -1,0 +1,5 @@
+{
+  "name": "tax_entities_update",
+  "title": "TaxEntities Update",
+  "description": "PUT /TaxEntities"
+}

@@ -1,0 +1,303 @@
+[
+  {
+    "name": "attachments_post",
+    "operationId": "Attachments_Post",
+    "path": "/Attachments",
+    "method": "POST"
+  },
+  {
+    "name": "catalog_items_create",
+    "operationId": "CatalogItems_Create",
+    "path": "/CatalogItems",
+    "method": "POST"
+  },
+  {
+    "name": "catalog_items_update",
+    "operationId": "CatalogItems_Update",
+    "path": "/CatalogItems",
+    "method": "PUT"
+  },
+  {
+    "name": "clock_times_create",
+    "operationId": "ClockTimes_Create",
+    "path": "/ClockTimes",
+    "method": "POST"
+  },
+  {
+    "name": "companies_post",
+    "operationId": "Companies_Post",
+    "path": "/Companies",
+    "method": "POST"
+  },
+  {
+    "name": "companies_put",
+    "operationId": "Companies_Put",
+    "path": "/Companies",
+    "method": "PUT"
+  },
+  {
+    "name": "contact_custom_fields_create",
+    "operationId": "ContactCustomFields_Create",
+    "path": "/ContactCustomFields",
+    "method": "POST"
+  },
+  {
+    "name": "contact_custom_fields_update",
+    "operationId": "ContactCustomFields_Update",
+    "path": "/ContactCustomFields",
+    "method": "PUT"
+  },
+  {
+    "name": "contacts_create",
+    "operationId": "Contacts_Create",
+    "path": "/Contacts",
+    "method": "POST"
+  },
+  {
+    "name": "contacts_update",
+    "operationId": "Contacts_Update",
+    "path": "/Contacts",
+    "method": "PUT"
+  },
+  {
+    "name": "equipment_reading_logs_create",
+    "operationId": "EquipmentReadingLogs_Create",
+    "path": "/EquipmentReadingLogs",
+    "method": "POST"
+  },
+  {
+    "name": "equipment_reading_logs_update",
+    "operationId": "EquipmentReadingLogs_Update",
+    "path": "/EquipmentReadingLogs",
+    "method": "PUT"
+  },
+  {
+    "name": "item_allocations_create",
+    "operationId": "ItemAllocations_Create",
+    "path": "/ItemAllocations",
+    "method": "POST"
+  },
+  {
+    "name": "item_allocations_update",
+    "operationId": "ItemAllocations_Update",
+    "path": "/ItemAllocations",
+    "method": "PUT"
+  },
+  {
+    "name": "localities_create",
+    "operationId": "Localities_Create",
+    "path": "/Localities",
+    "method": "POST"
+  },
+  {
+    "name": "localities_update",
+    "operationId": "Localities_Update",
+    "path": "/Localities",
+    "method": "PUT"
+  },
+  {
+    "name": "opportunities_create",
+    "operationId": "Opportunities_Create",
+    "path": "/Opportunities",
+    "method": "POST"
+  },
+  {
+    "name": "opportunity_lost_reasons_create",
+    "operationId": "OpportunityLostReasons_Create",
+    "path": "/OpportunityLostReasons",
+    "method": "POST"
+  },
+  {
+    "name": "opportunity_lost_reasons_update",
+    "operationId": "OpportunityLostReasons_Update",
+    "path": "/OpportunityLostReasons",
+    "method": "PUT"
+  },
+  {
+    "name": "opportunity_tags_create",
+    "operationId": "OpportunityTags_Create",
+    "path": "/OpportunityTags",
+    "method": "POST"
+  },
+  {
+    "name": "pay_codes_create",
+    "operationId": "PayCodes_Create",
+    "path": "/PayCodes",
+    "method": "POST"
+  },
+  {
+    "name": "pay_codes_update",
+    "operationId": "PayCodes_Update",
+    "path": "/PayCodes",
+    "method": "PUT"
+  },
+  {
+    "name": "pay_rate_override_pay_codes_create",
+    "operationId": "PayRateOverridePayCodes_Create",
+    "path": "/PayRateOverridePayCodes",
+    "method": "POST"
+  },
+  {
+    "name": "pay_rate_override_pay_codes_update",
+    "operationId": "PayRateOverridePayCodes_Update",
+    "path": "/PayRateOverridePayCodes",
+    "method": "PUT"
+  },
+  {
+    "name": "pay_rates_post",
+    "operationId": "PayRates_Post",
+    "path": "/PayRates",
+    "method": "POST"
+  },
+  {
+    "name": "pay_rates_put",
+    "operationId": "PayRates_Put",
+    "path": "/PayRates",
+    "method": "PUT"
+  },
+  {
+    "name": "pay_schedules_create",
+    "operationId": "PaySchedules_Create",
+    "path": "/PaySchedules",
+    "method": "POST"
+  },
+  {
+    "name": "pay_schedules_update",
+    "operationId": "PaySchedules_Update",
+    "path": "/PaySchedules",
+    "method": "PUT"
+  },
+  {
+    "name": "properties_create",
+    "operationId": "Properties_Create",
+    "path": "/Properties",
+    "method": "POST"
+  },
+  {
+    "name": "properties_update",
+    "operationId": "Properties_Update",
+    "path": "/Properties",
+    "method": "PUT"
+  },
+  {
+    "name": "property_availabilities_create",
+    "operationId": "PropertyAvailabilities_Create",
+    "path": "/PropertyAvailabilities",
+    "method": "POST"
+  },
+  {
+    "name": "property_contacts_create",
+    "operationId": "PropertyContacts_Create",
+    "path": "/PropertyContacts",
+    "method": "POST"
+  },
+  {
+    "name": "property_contacts_update",
+    "operationId": "PropertyContacts_Update",
+    "path": "/PropertyContacts",
+    "method": "PUT"
+  },
+  {
+    "name": "property_custom_fields_create",
+    "operationId": "PropertyCustomFields_Create",
+    "path": "/PropertyCustomFields",
+    "method": "POST"
+  },
+  {
+    "name": "property_custom_fields_update",
+    "operationId": "PropertyCustomFields_Update",
+    "path": "/PropertyCustomFields",
+    "method": "PUT"
+  },
+  {
+    "name": "receipts_create",
+    "operationId": "Receipts_Create",
+    "path": "/Receipts",
+    "method": "POST"
+  },
+  {
+    "name": "service_tax_overrides_put",
+    "operationId": "ServiceTaxOverrides_Put",
+    "path": "/ServiceTaxOverrides",
+    "method": "PUT"
+  },
+  {
+    "name": "tax_entities_post",
+    "operationId": "TaxEntities_Post",
+    "path": "/TaxEntities",
+    "method": "POST"
+  },
+  {
+    "name": "tax_entities_update",
+    "operationId": "TaxEntities_Update",
+    "path": "/TaxEntities",
+    "method": "PUT"
+  },
+  {
+    "name": "tax_jurisdictions_post",
+    "operationId": "TaxJurisdictions_Post",
+    "path": "/TaxJurisdictions",
+    "method": "POST"
+  },
+  {
+    "name": "tax_jurisdictions_update",
+    "operationId": "TaxJurisdictions_Update",
+    "path": "/TaxJurisdictions",
+    "method": "PUT"
+  },
+  {
+    "name": "unit_types_create",
+    "operationId": "UnitTypes_Create",
+    "path": "/UnitTypes",
+    "method": "POST"
+  },
+  {
+    "name": "unit_types_update",
+    "operationId": "UnitTypes_Update",
+    "path": "/UnitTypes",
+    "method": "PUT"
+  },
+  {
+    "name": "users_create",
+    "operationId": "Users_Create",
+    "path": "/Users",
+    "method": "POST"
+  },
+  {
+    "name": "users_update",
+    "operationId": "Users_Update",
+    "path": "/Users",
+    "method": "PUT"
+  },
+  {
+    "name": "vendors_post",
+    "operationId": "Vendors_Post",
+    "path": "/Vendors",
+    "method": "POST"
+  },
+  {
+    "name": "vendors_put",
+    "operationId": "Vendors_Put",
+    "path": "/Vendors",
+    "method": "PUT"
+  },
+  {
+    "name": "workers_comps_create",
+    "operationId": "WorkersComps_Create",
+    "path": "/WorkersComps",
+    "method": "POST"
+  },
+  {
+    "name": "workers_comps_update",
+    "operationId": "WorkersComps_Update",
+    "path": "/WorkersComps",
+    "method": "PUT"
+  },
+  {
+    "name": "work_ticket_times_create",
+    "operationId": "WorkTicketTimes_Create",
+    "path": "/WorkTicketTimes",
+    "method": "POST"
+  }
+]
+
