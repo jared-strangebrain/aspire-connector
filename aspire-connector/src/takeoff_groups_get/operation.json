@@ -1,0 +1,5 @@
+{
+  "name": "takeoff_groups_get",
+  "title": "Takeoff Groups Get",
+  "description": "GET /TakeoffGroups"
+}

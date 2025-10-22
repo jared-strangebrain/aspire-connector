@@ -1,0 +1,5 @@
+{
+  "name": "property_groups_get",
+  "title": "Property Groups Get",
+  "description": "GET /PropertyGroups"
+}

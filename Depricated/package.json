@@ -1,0 +1,40 @@
+{
+  "name": "aspire-cdk-connector",
+  "version": "0.1.6",
+  "description": "Aspire Cloud API connector (Prod/Sandbox) with auto auth refresh; composite+fetch handlers",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p . && node scripts/copy-operations.cjs",
+    "compile": "npm run build",
+    "precompile": "npm ls @trayio/cdk-runtime --all || true",
+    "test": "npm run build && cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --config jest.config.cjs",
+    "lint": "echo \"no lint configured\"",
+    "posttest": "node scripts/strip-dist-ctx.cjs",
+    "postinstall": "npm dedupe || true"
+  },
+  "dependencies": {
+    "@trayio/cdk-dsl": "4.103.0",
+    "@trayio/cdk-runtime": "4.103.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.27",
+    "cross-env": "^10.0.0",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.9.2"
+  },
+  "overrides": {
+    "@trayio/cdk-runtime": "4.103.0",
+    "@trayio/connectors-domain": {
+      "@trayio/cdk-runtime": "4.103.0"
+    }
+  },
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=8.3.0"
+  },
+  "packageManager": "npm@10.9.2"
+}

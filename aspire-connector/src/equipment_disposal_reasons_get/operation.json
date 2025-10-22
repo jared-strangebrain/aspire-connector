@@ -1,0 +1,5 @@
+{
+  "name": "equipment_disposal_reasons_get",
+  "title": "Equipment Disposal Reasons Get",
+  "description": "GET /EquipmentDisposalReasons"
+}

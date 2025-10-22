@@ -1,0 +1,5 @@
+{
+  "name": "catalog_items_get",
+  "title": "Catalog Items Get",
+  "description": "GET /CatalogItems"
+}

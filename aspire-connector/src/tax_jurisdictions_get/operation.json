@@ -1,0 +1,5 @@
+{
+  "name": "tax_jurisdictions_get",
+  "title": "Tax Jurisdictions Get",
+  "description": "GET /TaxJurisdictions"
+}

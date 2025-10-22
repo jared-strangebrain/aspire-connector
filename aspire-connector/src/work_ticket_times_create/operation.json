@@ -1,0 +1,5 @@
+{
+  "name": "work_ticket_times_create",
+  "title": "WorkTicketTimes Create",
+  "description": "POST /WorkTicketTimes"
+}

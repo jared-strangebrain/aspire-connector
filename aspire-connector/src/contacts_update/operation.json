@@ -1,0 +1,5 @@
+{
+  "name": "contacts_update",
+  "title": "Contacts Update",
+  "description": "PUT /Contacts"
+}

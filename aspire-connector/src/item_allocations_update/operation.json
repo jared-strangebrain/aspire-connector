@@ -1,0 +1,5 @@
+{
+  "name": "item_allocations_update",
+  "title": "ItemAllocations Update",
+  "description": "PUT /ItemAllocations"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "pay_rate_override_pay_codes_create",
+  "title": "PayRateOverridePayCodes Create",
+  "description": "POST /PayRateOverridePayCodes"
+}

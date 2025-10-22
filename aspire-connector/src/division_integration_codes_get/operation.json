@@ -1,0 +1,5 @@
+{
+  "name": "division_integration_codes_get",
+  "title": "Division Integration Codes Get",
+  "description": "GET /DivisionIntegrationCodes"
+}

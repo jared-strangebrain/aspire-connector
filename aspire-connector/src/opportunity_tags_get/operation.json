@@ -1,0 +1,5 @@
+{
+  "name": "opportunity_tags_get",
+  "title": "Opportunity Tags Get",
+  "description": "GET /OpportunityTags"
+}

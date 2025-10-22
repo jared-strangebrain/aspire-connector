@@ -1,0 +1,5 @@
+{
+  "name": "pay_schedules_get",
+  "title": "Pay Schedules Get",
+  "description": "GET /PaySchedules"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "opportunity_lost_reasons_update",
+  "title": "OpportunityLostReasons Update",
+  "description": "PUT /OpportunityLostReasons"
+}

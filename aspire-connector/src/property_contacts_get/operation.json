@@ -1,0 +1,5 @@
+{
+  "name": "property_contacts_get",
+  "title": "Property Contacts Get",
+  "description": "GET /PropertyContacts"
+}

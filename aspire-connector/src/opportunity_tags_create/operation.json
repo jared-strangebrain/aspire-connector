@@ -1,0 +1,5 @@
+{
+  "name": "opportunity_tags_create",
+  "title": "OpportunityTags Create",
+  "description": "POST /OpportunityTags"
+}

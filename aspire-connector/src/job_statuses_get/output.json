@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"JobStatusID":{"type":"number"},"JobStatus":{"type":"string"},"JobStatusName":{"type":"string"},"SortOrder":{"type":"number"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

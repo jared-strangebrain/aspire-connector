@@ -1,0 +1,1 @@
+{"type":"array","items":{"type":"object","properties":{"VendorID":{"type":"number"},"BranchID":{"type":"number"},"BranchName":{"type":"string"},"VendorName":{"type":"string"},"AccountingVendorID":{"type":"string"},"CreatedDateTime":{"type":"string"},"Active":{"type":"boolean"}},"additionalProperties":false,"advanced":[]},"$schema":"http://json-schema.org/draft-07/schema#"}

@@ -1,0 +1,5 @@
+{
+  "name": "token_request",
+  "title": "Token request",
+  "description": "Mint or refresh Aspire access tokens"
+}

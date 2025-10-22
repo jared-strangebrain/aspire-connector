@@ -1,0 +1,5 @@
+{
+  "name": "pay_codes_get",
+  "title": "Pay Codes Get",
+  "description": "GET /PayCodes"
+}

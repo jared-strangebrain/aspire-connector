@@ -1,0 +1,10 @@
+useTabs: true
+singleQuote: true
+overrides:
+  - files: "*.yml"
+    options:
+      singleQuote: false
+  - files:
+      - "*.yaml"
+    options:
+      singleQuote: false

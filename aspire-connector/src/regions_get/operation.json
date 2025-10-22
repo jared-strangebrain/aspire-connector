@@ -1,0 +1,5 @@
+{
+  "name": "regions_get",
+  "title": "Regions Get",
+  "description": "GET /Regions"
+}

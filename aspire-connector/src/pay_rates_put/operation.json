@@ -1,0 +1,5 @@
+{
+  "name": "pay_rates_put",
+  "title": "PayRates Put",
+  "description": "PUT /PayRates"
+}

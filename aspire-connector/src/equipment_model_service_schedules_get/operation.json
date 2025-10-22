@@ -1,0 +1,5 @@
+{
+  "name": "equipment_model_service_schedules_get",
+  "title": "Equipment Model Service Schedules Get",
+  "description": "GET /EquipmentModelServiceSchedules"
+}

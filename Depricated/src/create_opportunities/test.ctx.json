@@ -1,0 +1,10 @@
+﻿{
+  "authType": "oauth2",
+  "auth": {
+    "user": {
+      "access_token": "abc123",
+      "base_url": "https://example.test",
+      "environment": "sandbox"
+    }
+  }
+}

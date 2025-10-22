@@ -1,0 +1,5 @@
+{
+  "name": "bank_deposits_get",
+  "title": "Bank Deposits Get",
+  "description": "GET /BankDeposits"
+}

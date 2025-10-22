@@ -1,0 +1,5 @@
+{
+  "name": "attachment_types_get",
+  "title": "Attachment Types Get",
+  "description": "GET /AttachmentTypes"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "status_code": { "type": "number" },
+    "body": {
+      "type": "object",
+      "properties": {
+        "access_token": { "type": "string" },
+        "refresh_token": { "type": "string" }
+      },
+      "required": ["access_token"]
+    },
+    "headers": { "type": "object" }
+  },
+  "required": ["status_code", "body", "headers"]
+}

@@ -1,0 +1,5 @@
+{
+  "name": "employee_incident_types_get",
+  "title": "Employee Incident Types Get",
+  "description": "GET /EmployeeIncidentTypes"
+}

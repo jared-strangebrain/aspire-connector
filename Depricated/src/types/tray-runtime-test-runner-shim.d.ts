@@ -1,0 +1,1 @@
+declare module "@trayio/cdk-runtime/connector/operation/OperationHandlerTestRunner";

@@ -1,0 +1,5 @@
+{
+  "name": "equipment_reading_logs_create",
+  "title": "EquipmentReadingLogs Create",
+  "description": "POST /EquipmentReadingLogs"
+}
