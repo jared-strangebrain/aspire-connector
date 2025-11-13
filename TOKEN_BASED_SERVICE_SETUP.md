@@ -66,7 +66,7 @@ When you run the workflow:
 1. Tray detects that `properties_get` needs authentication
 2. Tray automatically calls the `#token_request` operation with your auth form inputs
 3. The connector receives the client_id, client_secret, and environment
-4. The connector calls `https://clouddemo-api.youraspire.com/Authorization` (based on environment)
+4. The connector calls `https://aspire-clouddemo-ext.youraspire.com/Authorization` (based on environment)
 5. The connector receives a `Token` and `RefreshToken`
 6. The connector returns them as `access_token` and `refresh_token`
 7. Tray stores these in the authentication

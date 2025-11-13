@@ -1,0 +1,632 @@
+{
+  "timestamp": "2025-10-28T15:04:57.748Z",
+  "summary": {
+    "total": 160,
+    "complete": 40,
+    "needsReview": 116
+  },
+  "completeOperations": [
+    "activities_get",
+    "addresses_get",
+    "attachments_get",
+    "attachments_post",
+    "branches_get",
+    "certifications_get",
+    "companies_get",
+    "companies_post",
+    "companies_put",
+    "contacts_create",
+    "contacts_get",
+    "contacts_update",
+    "divisions_get",
+    "equipments_get",
+    "invoices_get",
+    "issues_create",
+    "jobs_get",
+    "localities_create",
+    "localities_get",
+    "localities_update",
+    "opportunities_create",
+    "opportunities_get",
+    "payments_get",
+    "properties_create",
+    "properties_get",
+    "properties_update",
+    "receipts_create",
+    "receipts_get",
+    "regions_get",
+    "roles_get",
+    "routes_get",
+    "services_get",
+    "tags_get",
+    "tasks_create",
+    "users_create",
+    "users_get",
+    "users_update",
+    "vendors_get",
+    "vendors_post",
+    "vendors_put"
+  ],
+  "operationsWithIssues": [
+    {
+      "operation": "activity_categories_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: activity_categories_get"
+    },
+    {
+      "operation": "activity_comment_histories_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: activity_comment_histories_get"
+    },
+    {
+      "operation": "activity_contacts_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: activity_contacts_get"
+    },
+    {
+      "operation": "attachments_get_attachment_file_data",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: attachments_get_attachment_file_data"
+    },
+    {
+      "operation": "attachments_new_link",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: attachments_new_link"
+    },
+    {
+      "operation": "attachment_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: attachment_types_get"
+    },
+    {
+      "operation": "bank_deposits_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: bank_deposits_get"
+    },
+    {
+      "operation": "catalog_items_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: catalog_items_create"
+    },
+    {
+      "operation": "catalog_items_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: catalog_items_get"
+    },
+    {
+      "operation": "catalog_items_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: catalog_items_update"
+    },
+    {
+      "operation": "catalog_item_categories_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: catalog_item_categories_get"
+    },
+    {
+      "operation": "certification_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: certification_types_get"
+    },
+    {
+      "operation": "clock_times_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: clock_times_create"
+    },
+    {
+      "operation": "clock_times_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: clock_times_get"
+    },
+    {
+      "operation": "contact_custom_fields_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: contact_custom_fields_create"
+    },
+    {
+      "operation": "contact_custom_fields_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: contact_custom_fields_get"
+    },
+    {
+      "operation": "contact_custom_fields_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: contact_custom_fields_update"
+    },
+    {
+      "operation": "contact_custom_field_definitions_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: contact_custom_field_definitions_get"
+    },
+    {
+      "operation": "contact_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: contact_types_get"
+    },
+    {
+      "operation": "division_integration_codes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: division_integration_codes_get"
+    },
+    {
+      "operation": "employee_incidents_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: employee_incidents_get"
+    },
+    {
+      "operation": "employee_incident_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: employee_incident_types_get"
+    },
+    {
+      "operation": "equipment_classes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_classes_get"
+    },
+    {
+      "operation": "equipment_disposal_reasons_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_disposal_reasons_get"
+    },
+    {
+      "operation": "equipment_manufacturers_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_manufacturers_get"
+    },
+    {
+      "operation": "equipment_models_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_models_get"
+    },
+    {
+      "operation": "equipment_model_service_schedules_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_model_service_schedules_get"
+    },
+    {
+      "operation": "equipment_reading_logs_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_reading_logs_create"
+    },
+    {
+      "operation": "equipment_reading_logs_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_reading_logs_get"
+    },
+    {
+      "operation": "equipment_reading_logs_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_reading_logs_update"
+    },
+    {
+      "operation": "equipment_requested_services_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_requested_services_get"
+    },
+    {
+      "operation": "equipment_service_logs_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_service_logs_get"
+    },
+    {
+      "operation": "equipment_service_tags_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_service_tags_get"
+    },
+    {
+      "operation": "equipment_sizes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: equipment_sizes_get"
+    },
+    {
+      "operation": "inventory_locations_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: inventory_locations_get"
+    },
+    {
+      "operation": "invoice_batches_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: invoice_batches_get"
+    },
+    {
+      "operation": "invoice_revenues_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: invoice_revenues_get"
+    },
+    {
+      "operation": "invoice_taxes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: invoice_taxes_get"
+    },
+    {
+      "operation": "item_allocations_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: item_allocations_create"
+    },
+    {
+      "operation": "item_allocations_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: item_allocations_get"
+    },
+    {
+      "operation": "item_allocations_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: item_allocations_update"
+    },
+    {
+      "operation": "job_statuses_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: job_statuses_get"
+    },
+    {
+      "operation": "object_codes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: object_codes_get"
+    },
+    {
+      "operation": "opportunity_lost_reasons_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_lost_reasons_create"
+    },
+    {
+      "operation": "opportunity_lost_reasons_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_lost_reasons_get"
+    },
+    {
+      "operation": "opportunity_lost_reasons_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_lost_reasons_update"
+    },
+    {
+      "operation": "opportunity_services_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_services_get"
+    },
+    {
+      "operation": "opportunity_service_groups_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_service_groups_get"
+    },
+    {
+      "operation": "opportunity_service_items_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_service_items_get"
+    },
+    {
+      "operation": "opportunity_service_kit_items_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_service_kit_items_get"
+    },
+    {
+      "operation": "opportunity_statuses_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_statuses_get"
+    },
+    {
+      "operation": "opportunity_tags_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_tags_create"
+    },
+    {
+      "operation": "opportunity_tags_delete",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_tags_delete"
+    },
+    {
+      "operation": "opportunity_tags_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: opportunity_tags_get"
+    },
+    {
+      "operation": "partial_payments_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: partial_payments_create"
+    },
+    {
+      "operation": "payment_categories_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: payment_categories_get"
+    },
+    {
+      "operation": "payment_terms_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: payment_terms_get"
+    },
+    {
+      "operation": "pay_codes_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_codes_create"
+    },
+    {
+      "operation": "pay_codes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_codes_get"
+    },
+    {
+      "operation": "pay_codes_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_codes_update"
+    },
+    {
+      "operation": "pay_rates_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_rates_get"
+    },
+    {
+      "operation": "pay_rates_post",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_rates_post"
+    },
+    {
+      "operation": "pay_rates_put",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_rates_put"
+    },
+    {
+      "operation": "pay_rate_override_pay_codes_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_rate_override_pay_codes_create"
+    },
+    {
+      "operation": "pay_rate_override_pay_codes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_rate_override_pay_codes_get"
+    },
+    {
+      "operation": "pay_rate_override_pay_codes_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_rate_override_pay_codes_update"
+    },
+    {
+      "operation": "pay_schedules_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_schedules_create"
+    },
+    {
+      "operation": "pay_schedules_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_schedules_get"
+    },
+    {
+      "operation": "pay_schedules_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: pay_schedules_update"
+    },
+    {
+      "operation": "property_availabilities_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_availabilities_create"
+    },
+    {
+      "operation": "property_availabilities_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_availabilities_get"
+    },
+    {
+      "operation": "property_contacts_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_contacts_create"
+    },
+    {
+      "operation": "property_contacts_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_contacts_get"
+    },
+    {
+      "operation": "property_contacts_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_contacts_update"
+    },
+    {
+      "operation": "property_custom_fields_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_custom_fields_create"
+    },
+    {
+      "operation": "property_custom_fields_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_custom_fields_get"
+    },
+    {
+      "operation": "property_custom_fields_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_custom_fields_update"
+    },
+    {
+      "operation": "property_custom_field_definitions_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_custom_field_definitions_get"
+    },
+    {
+      "operation": "property_groups_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_groups_get"
+    },
+    {
+      "operation": "property_statuses_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_statuses_get"
+    },
+    {
+      "operation": "property_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: property_types_get"
+    },
+    {
+      "operation": "prospect_ratings_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: prospect_ratings_get"
+    },
+    {
+      "operation": "receipts_approve_receipt",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: receipts_approve_receipt"
+    },
+    {
+      "operation": "receipts_receive_receipt",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: receipts_receive_receipt"
+    },
+    {
+      "operation": "receipt_statuses_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: receipt_statuses_get"
+    },
+    {
+      "operation": "revenue_variances_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: revenue_variances_get"
+    },
+    {
+      "operation": "sales_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: sales_types_get"
+    },
+    {
+      "operation": "service_tax_overrides_post",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: service_tax_overrides_post"
+    },
+    {
+      "operation": "service_tax_overrides_put",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: service_tax_overrides_put"
+    },
+    {
+      "operation": "service_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: service_types_get"
+    },
+    {
+      "operation": "service_type_integration_codes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: service_type_integration_codes_get"
+    },
+    {
+      "operation": "takeoff_groups_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: takeoff_groups_get"
+    },
+    {
+      "operation": "takeoff_items_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: takeoff_items_get"
+    },
+    {
+      "operation": "tax_entities_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: tax_entities_get"
+    },
+    {
+      "operation": "tax_entities_post",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: tax_entities_post"
+    },
+    {
+      "operation": "tax_entities_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: tax_entities_update"
+    },
+    {
+      "operation": "tax_jurisdictions_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: tax_jurisdictions_get"
+    },
+    {
+      "operation": "tax_jurisdictions_post",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: tax_jurisdictions_post"
+    },
+    {
+      "operation": "tax_jurisdictions_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: tax_jurisdictions_update"
+    },
+    {
+      "operation": "unit_types_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: unit_types_create"
+    },
+    {
+      "operation": "unit_types_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: unit_types_get"
+    },
+    {
+      "operation": "unit_types_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: unit_types_update"
+    },
+    {
+      "operation": "version_get_api_version",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: version_get_api_version"
+    },
+    {
+      "operation": "workers_comps_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: workers_comps_create"
+    },
+    {
+      "operation": "workers_comps_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: workers_comps_get"
+    },
+    {
+      "operation": "workers_comps_update",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: workers_comps_create"
+    },
+    {
+      "operation": "work_tickets_create_as_needed_work_tickets",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_tickets_create_as_needed_work_tickets"
+    },
+    {
+      "operation": "work_tickets_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_tickets_get"
+    },
+    {
+      "operation": "work_ticket_canceled_reasons_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_canceled_reasons_get"
+    },
+    {
+      "operation": "work_ticket_items_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_items_get"
+    },
+    {
+      "operation": "work_ticket_revenues_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_revenues_get"
+    },
+    {
+      "operation": "work_ticket_status_mark_work_ticket_as_reviewed",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_status_mark_work_ticket_as_reviewed"
+    },
+    {
+      "operation": "work_ticket_times_create",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_times_create"
+    },
+    {
+      "operation": "work_ticket_times_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_times_get"
+    },
+    {
+      "operation": "work_ticket_visits_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_visits_get"
+    },
+    {
+      "operation": "work_ticket_visit_notes_get",
+      "issue": "Not found in Swagger spec",
+      "details": "Operation name: work_ticket_visit_notes_get"
+    }
+  ]
+}

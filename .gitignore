@@ -27,3 +27,4 @@ npm-debug.log*
 *.tsbuildinfo
 tsconfig.tsbuildinfo
 
+node_modules

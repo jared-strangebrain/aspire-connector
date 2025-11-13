@@ -12,18 +12,28 @@ export type TokenRequestInput = {
    * @title Client ID
    * @description Your Aspire API Client ID (created in Aspire Admin > API)
    */
-  client_id: string;
+  client_id?: string;
   
   /**
    * @title Client Secret  
    * @description Your Aspire API Client Secret
    */
-  client_secret: string;
+  client_secret?: string;
   
   /**
    * @title Environment
    * @description Select your Aspire environment
    */
-  environment: "production" | "sandbox" | "demo";
+  environment?: "production" | "sandbox" | "demo";
+
+  /**
+   * @internal
+   * @description Tray may wrap auth inputs inside auth_form_input for some service configurations.
+   */
+  auth_form_input?: {
+    client_id: string;
+    client_secret: string;
+    environment?: string;
+  };
 };
 

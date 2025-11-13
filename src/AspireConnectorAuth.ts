@@ -34,8 +34,8 @@ export function getBaseUrlForEnvironment(env: "production" | "sandbox" | "demo")
     case "sandbox":
       return "https://cloudsandbox-api.youraspire.com";
     case "demo":
-      return "https://clouddemo-api.youraspire.com";
+      return "https://aspire-clouddemo-ext.youraspire.com";
     default:
-      return "https://clouddemo-api.youraspire.com"; // Default to demo
+      return "https://aspire-clouddemo-ext.youraspire.com"; // Default to demo
   }
 }

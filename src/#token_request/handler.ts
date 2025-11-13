@@ -11,8 +11,25 @@ export const tokenRequestHandler = OperationHandlerSetup.configureHandler<
   TokenRequestOutput
 >((handler) =>
   handler.usingComposite(async (ctx, input, invoke) => {
-    // Get the environment from the input (Token Based auth passes directly, not in auth_form_input)
-    const rawEnv = input.environment;
+        // Support both direct inputs and nested auth_form_input (Token Based vs legacy behavior)
+        const clientId =
+          input.client_id ??
+          (input as { auth_form_input?: { client_id?: string } }).auth_form_input?.client_id;
+        const clientSecret =
+          input.client_secret ??
+          (input as { auth_form_input?: { client_secret?: string } }).auth_form_input?.client_secret;
+        const rawEnv =
+          input.environment ??
+          (input as { auth_form_input?: { environment?: string } }).auth_form_input?.environment;
+
+        if (!clientId || !clientSecret) {
+          console.error('[TokenRequest] Missing client credentials in input');
+          return OperationHandlerResult.failure({
+            _tag: 'ConnectorError',
+            message: 'Authentication failed: Missing client credentials in token request input'
+          });
+        }
+
     const env = (rawEnv?.toLowerCase() ?? 'demo') as "production" | "sandbox" | "demo";
     const baseUrl = getBaseUrlForEnvironment(env);
     const authUrl = `${baseUrl}/Authorization`;
@@ -20,7 +37,7 @@ export const tokenRequestHandler = OperationHandlerSetup.configureHandler<
     console.log('[TokenRequest] Starting authentication');
     console.log('[TokenRequest] Environment:', env);
     console.log('[TokenRequest] URL:', authUrl);
-    console.log('[TokenRequest] ClientId:', input.client_id);
+        console.log('[TokenRequest] ClientId:', clientId);
     
     try {
       // Make the authentication request
@@ -31,8 +48,8 @@ export const tokenRequestHandler = OperationHandlerSetup.configureHandler<
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ClientId: input.client_id,
-          Secret: input.client_secret
+              ClientId: clientId,
+              Secret: clientSecret
         })
       });
       

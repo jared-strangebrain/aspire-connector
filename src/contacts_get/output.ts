@@ -48,4 +48,10 @@ export interface Contact {
   ContactSignature?: string;
 }
 
-export type ContactsGetOutput = Contact[];
+export type ContactsGetOutput = {
+  /**
+   * @title Contacts
+   * @description List of contacts returned from the Aspire API
+   */
+  contacts: Contact[];
+};

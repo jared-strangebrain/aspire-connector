@@ -34,7 +34,7 @@
                         },
     "scripts":  {
                     "reinstall":  "rm package-lock.json \u0026\u0026 rm -rf node_modules \u0026\u0026 npm cache clean --force \u0026\u0026 npm install",
-                    "clean":  "rm -rf dist \u0026\u0026 rm tsconfig.tsbuildinfo",
+                    "clean":  "node scripts/clean.js",
                     "compile":  "tsc --build \u0026\u0026 tscp \u003e\u003e /dev/null",
                     "test":  "echo \u0027Skipping tests for deployment\u0027"
                 }

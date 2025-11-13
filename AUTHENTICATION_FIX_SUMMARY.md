@@ -12,7 +12,7 @@ This is the critical fix that allows Tray to properly call the `#token_request` 
 ### 2. **Hardcoded Demo URL in #token_request** ✅ FIXED
 **Problem:** The `#token_request` handler had a hardcoded URL that always pointed to the demo environment:
 ```typescript
-.post("https://clouddemo-api.youraspire.com/Authorization")
+.post("https://aspire-clouddemo-ext.youraspire.com/Authorization")
 ```
 
 This meant that regardless of which environment the user selected (demo, sandbox, or production), the connector always authenticated against demo. When it tried to use that demo token on a different environment, it would get 401 errors.
@@ -29,7 +29,7 @@ handler.usingComposite(async (ctx, input, invoke) => {
 
 ### 3. **Environment URL Mapping** ✅ CONFIRMED WORKING
 The connector correctly maps environments to URLs:
-- **Demo:** `https://clouddemo-api.youraspire.com/`
+- **Demo:** `https://aspire-clouddemo-ext.youraspire.com/`
 - **Sandbox:** `https://cloudsandbox-api.youraspire.com/`
 - **Production:** `https://cloud-api.youraspire.com/`
 

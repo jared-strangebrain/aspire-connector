@@ -1,4 +1,5 @@
 import { OperationHandlerSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerSetup';
+import { OperationHandlerResult } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
 import { AspireConnectorAuth } from '../AspireConnectorAuth';
 import { globalConfigHttp } from '../GlobalConfig';
 import { ContactsGetInput } from './input';
@@ -42,8 +43,12 @@ export const contacts_getHandler = OperationHandlerSetup.configureHandler<
         }
         return req.withoutBody();
       })
-      .handleResponse((ctx, input, response) => 
-        response.parseWithBodyAsJson()
+      .handleResponse((ctx, input, response) =>
+        response.parseWithBodyAsJson((body) =>
+          OperationHandlerResult.success({
+            contacts: body as ContactsGetOutput['contacts']
+          })
+        )
       )
   )
 );

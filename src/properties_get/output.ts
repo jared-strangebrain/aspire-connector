@@ -64,4 +64,10 @@ export interface Property {
   PropertyTypeIntegrationCode?: string;
 }
 
-export type PropertiesGetOutput = Property[];
+export type PropertiesGetOutput = {
+  /**
+   * @title Properties
+   * @description List of properties returned from the Aspire API
+   */
+  properties: Property[];
+};

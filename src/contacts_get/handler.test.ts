@@ -1,4 +1,5 @@
 import { OperationHandlerTestSetup } from '@trayio/cdk-dsl/connector/operation/OperationHandlerTest';
+import { OperationHandlerResult } from '@trayio/cdk-dsl/connector/operation/OperationHandler';
 import { contacts_getHandler } from './handler';
 
 /**
@@ -32,12 +33,10 @@ describe('contacts_get', () => {
           .givenNothing()
           .when((ctx, testContext) => ({}))
           .then(({ output }) => {
-            // Verify the operation executed successfully
             expect(output.isSuccess).toBe(true);
-            if (output.isSuccess) {
-              // Output is properly typed as ContactsGetOutput
-              expect(output.value).toBeDefined();
-            }
+            const value = OperationHandlerResult.getSuccessfulValueOrFail(output);
+            expect(value.contacts).toBeDefined();
+            expect(Array.isArray(value.contacts)).toBe(true);
           })
           .finallyDoNothing()
       )
@@ -47,15 +46,20 @@ describe('contacts_get', () => {
         testCase
           .givenNothing()
           .when((ctx, testContext) => ({
-            select: 'optional-value',
-            filter: 'optional-value',
-            expand: 'optional-value'
+            select: 'ContactID,FirstName,LastName',
+            filter: "Active eq true",
+            expand: 'ContactTags',
+            orderby: 'CreatedDateTime desc',
+            skip: '0',
+            top: '5',
+            pageNumber: '1',
+            limit: '5',
+            api_version: '1.0'
           }))
           .then(({ output }) => {
             expect(output.isSuccess).toBe(true);
-            if (output.isSuccess) {
-              expect(output.value).toBeDefined();
-            }
+            const value = OperationHandlerResult.getSuccessfulValueOrFail(output);
+            expect(Array.isArray(value.contacts)).toBe(true);
           })
           .finallyDoNothing()
       )
